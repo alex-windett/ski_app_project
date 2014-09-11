@@ -9,11 +9,13 @@ SkiApp::Application.routes.draw do
      resources :media
   end
 
+
+  # get '/track', to: 'track#'
   resources :resorts do
     get 'page/:page', action: :index, on: :collection
   end
 
-  resources :markers, only: [:index, :new]
+  resources :markers, only: [:index, :new, :create]
 
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks"}
 

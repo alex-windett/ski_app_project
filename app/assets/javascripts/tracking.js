@@ -10,7 +10,23 @@ function geoFindMe() {
     latitude  = position.coords.latitude;
     longitude = position.coords.longitude;
     output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+
+      var lat = $("#lat").html();
+      var lon = $("#lon").html();
+      console.log(lat)
+      console.log(lon)
     
+    $.ajax({
+        type: "POST",
+        url: "/markers",
+        dataType: "json",
+        data: {marker: {latitude: lat, longitude: lon}}
+      }).success(function(data){
+        console.log(data, "hello world")
+        alert('result from ajax')
+      }).fail(function(data){
+        alert(data)
+      })
   };
 
   function error() {
@@ -25,33 +41,41 @@ function geoFindMe() {
   }
 
   navigator.geolocation.watchPosition(success, error, options);
-
+}
 
 
 // $(document).ready(function(){
 
-//  var request = $.ajax({
-//     type: "POST",
-//     url: "/markers.json",
-//     dataType: "json",
+//   $("#geo_button").click(function(){
+//       var lat = $("#lat").html();
+//       var lon = $("#lon").html();
+//       console.log(lat)
+//       console.log(lon)
+    
+
+//     $.ajax({
+//         type: "POST",
+//         url: "/markers",
+//         dataType: "html",
+//         data: {marker: {latitude: lat, longitude: lon}}
+//       }).success(function(){
+//         alert("sucess")
+//       }).fail(function(){
+//         alert("fail")
+//       })
+//   });
+
+// var senddata = function () { 
+//   console.log("this ran") 
+//     var request = $.ajax({ 
+//         type: "POST",
+//           url: "/markers.json",
+//       dataType: "json",
 //     data: {
 //       latitude: latitude,
 //       longitude: longitude
 //     }
 //   })
 
-//  request.success(function(){
-//      console.log(latitude)
-//     console.log(longitude)
-//   })
 
-//  request.fail(function(){
-//   alert("failed")
-//  })
 // });
-
-}
-
-
-// ajax put request with the latitude and longitude into markers model into the corosponding colomuns
-

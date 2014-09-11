@@ -24,8 +24,12 @@ class Run < ActiveRecord::Base
   end
 
   def parse_xml(doc)
-    doc.root.elements.each do |node|
-      parse_runs(node)
+    begin 
+        doc.root.elements.each do |node|
+          parse_runs(node)
+        end
+    rescue
+
     end
   end
 

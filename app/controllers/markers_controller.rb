@@ -45,15 +45,14 @@ class MarkersController < ApplicationController
   # POST /countries
   # POST /countries.json
   def create
-    @country = Country.new(params[:country])
-
+    @marker = Marker.new(params[:marker])
     respond_to do |format|
-      if @country.save
-        format.html { redirect_to @country, notice: 'Country was successfully created.' }
-        format.json { render json: @country, status: :created, location: @country }
+      if @marker.save
+        format.html { redirect_to @marker, notice: 'Country was successfully created.' }
+        format.json { render json: @marker }
       else
         format.html { render action: "new" }
-        format.json { render json: @country.errors, status: :unprocessable_entity }
+        format.json { render json: @marker.errors }
       end
     end
   end
