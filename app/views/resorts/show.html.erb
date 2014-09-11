@@ -17,7 +17,7 @@
 
 <p>
   <b>Country:</b>
-  <%= @resort.country.name %>
+  <%= @resort.country.name if @resort.country.name.present? %>
 </p>
 
 <p>
