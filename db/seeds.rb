@@ -47,6 +47,7 @@ c7.resorts << r10
 c7.resorts << r11
 c8.resorts << r12
 c8.resorts << r13
+c8.resorts << r5
 c9.resorts << r14
 c9.resorts << r15
 c9.resorts << r16

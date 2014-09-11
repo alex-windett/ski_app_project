@@ -10,7 +10,7 @@ SkiApp::Application.routes.draw do
   end
 
 
-  # get '/track', to: 'track#'
+  get '/track', to: 'track#index'
   resources :resorts do
     get 'page/:page', action: :index, on: :collection
   end

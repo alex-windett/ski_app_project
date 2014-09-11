@@ -24,8 +24,6 @@ function geoFindMe() {
       }).success(function(data){
         console.log(data, "hello world")
         alert('result from ajax')
-      }).fail(function(data){
-        alert(data)
       })
   };
 
