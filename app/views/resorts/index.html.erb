@@ -1,0 +1,33 @@
+<h1>Listing resorts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Country</th>
+    <th>Image</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @resorts.each do |resort| %>
+  <tr>
+    <td><%= link_to resort.name, resort %></td>
+    <td><%= resort.description %></td>
+    <td><%#= resort.country.name %></td> 
+    <!-- fix later, need to validate => presence of country needs to be present -->
+    <td><%= image_tag resort.image if resort.image.present? %></td>
+    <td><%= link_to 'Edit', edit_resort_path(resort) %></td>
+    <td><%= link_to 'Destroy', resort, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= paginate @resorts %>
+
+<br />
+
+<%= link_to 'New Resort', new_resort_path %>

@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<aside class="run_details">
+  <h2><%= @run.name %></h2>
+  <% if @run %>
+  <p style="display:none" id="run_id"><%= @run.id %></p>
+  <% end %>
+  <p>Description: <%= @run.description %></p>
+  <p>Resort: <%= @run.resort.name %></p>
+  <p>Rating: <%= @run.rating %></p>
+  <div class="geo_data">
+    <p><button onclick="geoFindMe()">Start Tracking</button></p>
+    <div id="output"></div>
+  </div>
+  <%= link_to 'Add New Media to this run', new_run_medium_path(@run) %> |
+  <%= link_to 'Edit', edit_run_path(@run) %> |
+  <%= link_to 'Back', runs_path %>
+</aside>
+
+<!-- <table class='run_info'>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Elevation</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @run.markers.each do |marker| %>
+        <tr>
+          <td><%= marker.id %></td>
+          <td><%= marker.latitude %></td>
+          <td><%= marker.longitude %></td>
+          <td><%= marker.elevation %></td>
+          <td><%= marker.marker_created_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+</table> -->
+
+
+<section>
+  <div id="map_canvas"></div>
+  <div class="graph"></div>
+</section>
+
+<section class="media">
+  <% @media.each do |media| %>
+    <% if media.run_id == @run.id %>
+        <%= link_to ( image_tag media.image), [@run, media] if media.image.present?  %>
+    <% end %>
+  <% end %>
+
+   <% @media.each do |media| %>
+    <% if media.run_id == @run.id %>
+         <%= link_to (video_tag media.video, :size => "320x240", :controls => true, :poster => "http://cdn3.coresites.mpora.com/skiunion/wp-content/uploads/2011/10/salomon-flash.jpg"), [@run, media] if media.video.present? %>
+    <% end %>
+  <% end %>
+</section>

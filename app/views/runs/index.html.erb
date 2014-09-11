@@ -1,0 +1,28 @@
+<h1>All Current Runs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Resort</th>
+    <th>Rating</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @runs.each do |run| %>
+  <tr>
+    <td><%= link_to run.name, run %></td>
+    <td><%= run.description %></td>  
+    <td><%= run.resort.name %></td>
+    <td><%= run.rating %></td>
+    <td><%= link_to 'Edit', edit_run_path(run) %></td>
+    <td><%= link_to 'Destroy', run, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Run', new_run_path %>

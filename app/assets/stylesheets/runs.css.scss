@@ -1,0 +1,54 @@
+.run_info td {
+  border-right: solid black 2px;
+}
+
+.run_details {
+  right: 15%;
+  width: 21%;
+  border: 2px solid black;
+  padding: 1%;
+  position: fixed;
+}
+
+#map_canvas {
+  width: 66%;
+  height: 500px;
+  float: left;
+}
+
+.media {
+  margin-top: 2%;
+  width: 66%;
+  padding-bottom: 2%;
+   img {
+    width: 48%;
+    height: auto;
+    padding-right: 2%;
+   }
+   video {
+    width: 48%;
+    }
+}
+
+
+.geo_data {
+  position: relative;
+}
+
+.graph {
+  margin: 0 auto 0 auto;
+    path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+    }
+ 
+    line {
+        stroke: black;
+    }
+     
+    text {
+        font-family: Arial;
+        font-size: 9pt;
+    }
+}

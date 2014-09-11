@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ski App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= google_maps_api %>
+  <%= run_id_to_js(@run.id) if @run %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body>
+        <div class='rmm' data-menu-style="sapphire">
+            <ul>
+                <li><%= link_to "Home", page_path('home') %></li>
+                <li><%= link_to "Countries", countries_path %></li>
+                <li><%= link_to "Resorts", resorts_path %></li>
+                <li><%= link_to "Runs", runs_path %></li>
+                <li><%= link_to "Photos and Videos", runs_path %></li>
+                <li>
+                  <% if user_signed_in? %>
+                    <%= link_to current_user.email, current_user %>
+                    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li> 
+                  <% else %>
+                    <li><%= link_to "Sign up",new_user_registration_path %></li>
+                    <li><%= link_to "Login", new_user_session_path %></li>
+                  <% end %>
+                </li>
+            </ul>
+        </div>
+
+<div class="main_content">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+  <h1><%= @user.name %></h1>
+  
+  <p>
+    <b> Date of Birth:
+    <%= @user.dob %> </b>
+  </p>
+
+  <p>
+    <b> Image:
+    <%= image_tag @user.photo if @user.photo.present? %> </b>
+  </p>
+     
+    <%= link_to 'Edit Profile', edit_user_registration_path %>
+    <%= link_to 'Back', user_index_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <div id="resortName"><%= @resort.name %></div>
+</p>
+
+<p>
+  <b>Current Snow Conditions</b>
+  <div class="weather"></div>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @resort.description %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @resort.country.name %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= image_tag @resort.image if @resort.image.present? %>
+</p>
+
+<p>
+  <b>Uploaded Runs:</b>
+  <% @resort.runs %>
+</p>
+
+<%= link_to 'New Run', new_run_path %> |
+<%= link_to 'Edit', edit_resort_path(@resort) %> |
+<%= link_to 'Back', resorts_path %>

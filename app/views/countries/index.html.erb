@@ -1,0 +1,33 @@
+<html ng-app="skiApp">
+
+<div ng-Controller="SkiController as ski">
+
+  <div class="countries">
+
+    <section id="country_list">
+       <h1>Select a country</h1>    
+       <input placeholder="Search Countries..." ng-model="search">
+         <ul>
+            <li ng-repeat="country in countries | filter:{name:search} | orderBy:'name'" ng-click="selectCountry(country)"> {{ country.name }} </li>
+         </ul>
+
+      <form name="countryForm" ng-submit="countryForm.$valid && addCountry()">
+        <label>Add a new country</label>
+        <input type="text" ng-model="newCountry.name"> 
+        <button>Submit</button>     
+      </form>
+     </section>
+
+    <section id="selected_country" ng-show="selectCountry">
+      <h2> {{ selectedCountry.name }} </h2>
+      <ul>
+        <li ng-repeat="resort in resorts" ng-if="resort.country_id === selectedCountry.id">
+          <a href="/resorts/{{resort.id}}"> {{ resort.name }} </a>
+        </li>
+      </ul>
+       <p>Add a new resort <%= link_to "here", new_resort_path %>, (opens a new page)</p>
+    </section>
+
+  </div>
+
+</div>
