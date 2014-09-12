@@ -6,30 +6,39 @@ function geoFindMe() {
     return;
   }
 
-  function success(position) {
-    latitude  = position.coords.latitude;
-    longitude = position.coords.longitude;
-    output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+    var watchID = null;
 
-      var lat = $("#lat").html();
-      var lon = $("#lon").html();
-      console.log(lat)
-      console.log(lon)
+  function success(position) {
+    var latitude  = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    var altitude = position.coords.altitude;
+    output.innerHTML = altitude + '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude  + '°</p>';
+
+      // var lat = $("#lat").html();
+      // var lon = $("#lon").html();
+      // console.log(lat)
+      // console.log(lon)
     
     $.ajax({
         type: "POST",
         url: "/markers",
         dataType: "json",
-        data: {marker: {latitude: lat, longitude: lon}}
+        data: {marker: {latitude: latitude, longitude: longitude, elevation: altitude}}
       }).success(function(data){
-        console.log(data, "hello world")
-        alert('result from ajax')
+        console.log(data)
       })
   };
 
   function error() {
     output.innerHTML = "Can't get location";
   };
+
+    function clearWatch() {
+        if (watchID != null) {
+            navigator.geolocation.clearWatch(watchID);
+            watchID = null; 
+        }
+    }
 
   output.innerHTML = "<p>Locating…</p>";
 
@@ -40,40 +49,3 @@ function geoFindMe() {
 
   navigator.geolocation.watchPosition(success, error, options);
 }
-
-
-// $(document).ready(function(){
-
-//   $("#geo_button").click(function(){
-//       var lat = $("#lat").html();
-//       var lon = $("#lon").html();
-//       console.log(lat)
-//       console.log(lon)
-    
-
-//     $.ajax({
-//         type: "POST",
-//         url: "/markers",
-//         dataType: "html",
-//         data: {marker: {latitude: lat, longitude: lon}}
-//       }).success(function(){
-//         alert("sucess")
-//       }).fail(function(){
-//         alert("fail")
-//       })
-//   });
-
-// var senddata = function () { 
-//   console.log("this ran") 
-//     var request = $.ajax({ 
-//         type: "POST",
-//           url: "/markers.json",
-//       dataType: "json",
-//     data: {
-//       latitude: latitude,
-//       longitude: longitude
-//     }
-//   })
-
-
-// });

@@ -3,7 +3,7 @@ class MarkersController < ApplicationController
   # GET /countries.json
   def index
     if params["run_id"]
-       @run = Run.find(params["run_id"].to_i)
+      @run = Run.find(params["run_id"].to_i)
       @markers = @run.segments[0].markers
     else
       @markers = []
