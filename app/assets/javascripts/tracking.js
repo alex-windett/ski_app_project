@@ -1,32 +1,30 @@
+
+
 function geoFindMe() {
   var output = document.getElementById("output");
-
   if (!navigator.geolocation){
     output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
     return;
   }
 
-    var watchID = null;
+
 
   function success(position) {
     var latitude  = position.coords.latitude;
     var longitude = position.coords.longitude;
     var altitude = position.coords.altitude;
-    output.innerHTML = altitude + '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude  + '°</p>';
+    var speed = position.coords.speed
+    var run_id =  $('#run_id').html()
 
-      // var lat = $("#lat").html();
-      // var lon = $("#lon").html();
-      // console.log(lat)
-      // console.log(lon)
-    
+    output.innerHTML = '<p>Your speed is ' + speed + ' m <br>Your altitude is ' + altitude + ' m <br>Latitude is ' + latitude + '° <br>Longitude is ' + longitude  + '°</p>';
+
     $.ajax({
         type: "POST",
         url: "/markers",
         dataType: "json",
-        data: {marker: {latitude: latitude, longitude: longitude, elevation: altitude}}
+        data: {marker: {latitude: latitude, longitude: longitude, elevation: altitude, segment_id: run_id}}
       }).success(function(data){
         console.log(data)
-        alert(data)
       })
   };
 
@@ -34,12 +32,7 @@ function geoFindMe() {
     output.innerHTML = "Can't get location";
   };
 
-    function clearWatch() {
-        if (watchID != null) {
-            navigator.geolocation.clearWatch(watchID);
-            watchID = null; 
-        }
-    }
+ 
 
   output.innerHTML = "<p>Locating…</p>";
 
@@ -48,5 +41,10 @@ function geoFindMe() {
     timeout: 6000
   }
 
-  navigator.geolocation.watchPosition(success, error, options);
+  id = navigator.geolocation.watchPosition(success, error, options);
 }
+
+ function clearWatch() {
+    console.log("here")
+          navigator.geolocation.clearWatch(id);
+  }

@@ -8,8 +8,8 @@
   <p>Description: <%= @run.description %></p>
   <p>Resort: <%= @run.resort.name %></p>
   <p>Rating: <%= @run.rating %></p>
-  <div id="lat">51</div>
-  <div id="lon">76</div>
+  
+  <div id="run_id"><%= @run.id %></div>
   <div class="geo_data">
     <p><button onclick="geoFindMe()">Start Tracking</button></p>
     <div id="output"></div>
