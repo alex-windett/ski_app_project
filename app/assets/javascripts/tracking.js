@@ -26,6 +26,7 @@ function geoFindMe() {
         data: {marker: {latitude: latitude, longitude: longitude, elevation: altitude}}
       }).success(function(data){
         console.log(data)
+        alert(data)
       })
   };
 
