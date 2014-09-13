@@ -1,0 +1,62 @@
+/* line 1, ../../app/assets/stylesheets/runs.css.scss */
+.run_info td {
+  border-right: solid black 2px;
+}
+
+/* line 5, ../../app/assets/stylesheets/runs.css.scss */
+.run_details {
+  right: 15%;
+  width: 21%;
+  border: 2px solid black;
+  padding: 1%;
+  position: fixed;
+}
+
+/* line 13, ../../app/assets/stylesheets/runs.css.scss */
+#map_canvas {
+  width: 66%;
+  height: 500px;
+  float: left;
+}
+
+/* line 19, ../../app/assets/stylesheets/runs.css.scss */
+.media {
+  margin-top: 2%;
+  width: 66%;
+  padding-bottom: 2%;
+}
+/* line 23, ../../app/assets/stylesheets/runs.css.scss */
+.media img {
+  width: 48%;
+  height: auto;
+  padding-right: 2%;
+}
+/* line 28, ../../app/assets/stylesheets/runs.css.scss */
+.media video {
+  width: 48%;
+}
+
+/* line 34, ../../app/assets/stylesheets/runs.css.scss */
+.geo_data {
+  position: relative;
+}
+
+/* line 38, ../../app/assets/stylesheets/runs.css.scss */
+.graph {
+  margin: 0 auto 0 auto;
+}
+/* line 40, ../../app/assets/stylesheets/runs.css.scss */
+.graph path {
+  stroke: steelblue;
+  stroke-width: 2;
+  fill: none;
+}
+/* line 46, ../../app/assets/stylesheets/runs.css.scss */
+.graph line {
+  stroke: black;
+}
+/* line 50, ../../app/assets/stylesheets/runs.css.scss */
+.graph text {
+  font-family: Arial;
+  font-size: 9pt;
+}

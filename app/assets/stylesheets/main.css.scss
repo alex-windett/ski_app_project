@@ -1,3 +1,8 @@
+$blue:  #2DB6CF;
+$dark:  #444444;
+$white: #FFFFFF;
+
+
 .main_content {
   width: 70%;
   margin: 4% auto 5% auto;
@@ -41,4 +46,31 @@ tbody tr th, td {
   padding: 2%;
   float: right;
   width: 44%;
+}
+
+#button {
+  border: 0 none;
+  border-radius: 2px;
+  color: red;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  padding: 7px 10px;
+  text-transform: none;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  width: 32%; /* auto */
+  text-align: center; /* DELETE WHEN WIDTH AUTO */
+  background: none repeat scroll 0 0 $blue;
+    a {
+      color: red;
+    }
+    &:hover {
+      background: none repeat scroll 0 0 $dark;
+  }
 }

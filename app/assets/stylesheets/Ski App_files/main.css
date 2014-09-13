@@ -1,0 +1,53 @@
+/* line 1, ../../app/assets/stylesheets/main.css.scss */
+.main_content {
+  width: 70%;
+  margin: 4% auto 5% auto;
+}
+
+/* line 6, ../../app/assets/stylesheets/main.css.scss */
+.home {
+  width: 100%;
+}
+/* line 8, ../../app/assets/stylesheets/main.css.scss */
+.home .home_info {
+  padding: 2%;
+  display: inline-block;
+  width: 28%;
+  border: solid 2px black;
+}
+
+/* line 16, ../../app/assets/stylesheets/main.css.scss */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* line 21, ../../app/assets/stylesheets/main.css.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 25, ../../app/assets/stylesheets/main.css.scss */
+tbody tr th, td {
+  padding: 5px;
+}
+
+/* line 29, ../../app/assets/stylesheets/main.css.scss */
+#country_list {
+  border: 2px solid black;
+  padding: 2%;
+  float: left;
+  width: 44%;
+}
+/* line 34, ../../app/assets/stylesheets/main.css.scss */
+#country_list input {
+  width: 50%;
+}
+
+/* line 39, ../../app/assets/stylesheets/main.css.scss */
+#selected_country {
+  border: 2px solid black;
+  padding: 2%;
+  float: right;
+  width: 44%;
+}

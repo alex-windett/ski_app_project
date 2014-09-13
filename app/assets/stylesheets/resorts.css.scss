@@ -8,7 +8,7 @@ $white: #FFFFFF;
   }
 }
 
-  .resort_header {
+.resort_header {
     h2 {
       font-size: 50px;
       text-align: right;
@@ -18,40 +18,29 @@ $white: #FFFFFF;
     }
   }
 
- .weather {
-    width: 50%;
-  }
+#weather {
+  width: 50%;
+  float: left;
+}
 
-  #resort_image {
-    img {
-    width: 100%;
-    height: auto;
-    }
+ #hourlyWeather {
+  width: 50%;
+  float: right;
+  text-align: right;
+  img {
+    width: 20%;
+    float: right;
   }
+}
 
-#button {
-  border: 0 none;
-  border-radius: 2px;
-  color: red;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 20px;
-  margin-bottom: 0;
-  margin-top: 10px;
-  padding: 7px 10px;
-  text-transform: none;
-  transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -webkit-transition: all 0.3s ease 0s;
-  width: 16.795%; /* auto */
-  text-align: center; /* DELETE WHEN WIDTH AUTO */
-  background: none repeat scroll 0 0 $blue;
-    a {
-      color: red;
-    }
-    &:hover {
-      background: none repeat scroll 0 0 $dark;
+#resort_image {
+  img {
+  width: 100%;
+  height: auto;
+  padding: 2% 0 2% 0;
   }
+}
+
+.run_list {
+  column-count: 3;
 }

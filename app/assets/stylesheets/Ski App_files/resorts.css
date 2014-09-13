@@ -1,0 +1,58 @@
+/* line 6, ../../app/assets/stylesheets/resorts.css.scss */
+.resort li {
+  list-style: none;
+}
+
+/* line 12, ../../app/assets/stylesheets/resorts.css.scss */
+.resort_header h2 {
+  font-size: 50px;
+  text-align: right;
+}
+/* line 16, ../../app/assets/stylesheets/resorts.css.scss */
+.resort_header p {
+  float: right;
+}
+
+/* line 22, ../../app/assets/stylesheets/resorts.css.scss */
+.weather {
+  width: 50%;
+}
+
+/* line 27, ../../app/assets/stylesheets/resorts.css.scss */
+#resort_image img {
+  width: 100%;
+  height: auto;
+  padding: 2% 0 2% 0;
+}
+
+/* line 34, ../../app/assets/stylesheets/resorts.css.scss */
+#button {
+  border: 0 none;
+  border-radius: 2px;
+  color: red;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  padding: 7px 10px;
+  text-transform: none;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  width: 16.795%;
+  /* auto */
+  text-align: center;
+  /* DELETE WHEN WIDTH AUTO */
+  background: none repeat scroll 0 0 #2DB6CF;
+}
+/* line 53, ../../app/assets/stylesheets/resorts.css.scss */
+#button a {
+  color: red;
+}
+/* line 56, ../../app/assets/stylesheets/resorts.css.scss */
+#button:hover {
+  background: none repeat scroll 0 0 #444444;
+}
