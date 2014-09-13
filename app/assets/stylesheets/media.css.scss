@@ -1,0 +1,27 @@
+.media_index_photo {
+  list-style: none;
+  float: left;
+  width: 48%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.media_index_video {
+  list-style: none;
+  float: right;
+  width: 48%;
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.media_show {
+  width: 100%;
+  video {
+    width: 100%;
+    height: auto;
+  }
+}

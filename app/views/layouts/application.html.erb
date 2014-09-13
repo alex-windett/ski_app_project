@@ -18,7 +18,7 @@
                 <li><%= link_to "Resorts", resorts_path %></li>
                 <li> <%= link_to "Start Tracking", track_path %></li>
                 <li><%= link_to "Runs", runs_path %></li>
-                <li><%= link_to "Photos and Videos", runs_path %></li>
+                <li><%= link_to "Photos and Videos", media_path %></li>
                 <li>
                   <% if user_signed_in? %>
                     <%= link_to current_user.email, current_user %>
