@@ -37,6 +37,9 @@ function geoFindMe() {
       run_id: 1 
     }
 
+
+// multiple ajax requests, trigged by the success of the previous one. 
+// Create a run, then a segment, then the markers
     $.ajax({
       type: "POST",
       url: "/runs",
