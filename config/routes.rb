@@ -5,10 +5,13 @@ SkiApp::Application.routes.draw do
 
   resources :comments
 
+  resources :segments, only: [:new, :create, :show]
+
   resources :runs do
      resources :media
   end
 
+get '/media', to: 'stuff#index'
 
   get '/track', to: 'track#index'
   resources :resorts do

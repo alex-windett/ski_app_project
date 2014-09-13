@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p class="media">
-  <b>Image:</b>
-  <%= @medium.image.detail.url if @medium.image.present? %>
+  <b>Image:</b> <br />
+  <%= image_tag @medium.image.detail.url if @medium.image.present? %>
 </p>
 
 <p class="media">
-  <b>Video:</b>
+  <b>Video:</b> <br />
   <%= (video_tag @medium.video, :size => "640x480", :controls => true, :autoplay => true) if @medium.video.present? %>
 </p>
 

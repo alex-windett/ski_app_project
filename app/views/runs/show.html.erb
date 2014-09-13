@@ -8,13 +8,13 @@
   <p>Description: <%= @run.description %></p>
   <p>Resort: <%= @run.resort.name %></p>
   <p>Rating: <%= @run.rating %></p>
-  
-  <div id="run_id"><%= @run.id %></div>
+
   <div class="geo_data">
     <p><button onclick="geoFindMe()">Start Tracking</button></p>
     <div id="output"></div>
     <button onclick="clearWatch()">Stop Tracking</button>
   </div>
+  
   <%= link_to 'Add New Media to this run', new_run_medium_path(@run) %> |
   <%= link_to 'Edit', edit_run_path(@run) %> |
   <%= link_to 'Back', runs_path %>

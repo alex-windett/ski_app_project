@@ -6,6 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Country.destroy_all
+Resort.destroy_all
+
 c1 =Country.create(name: "France")
 c2 =Country.create(name: "Austria")
 c3 =Country.create(name: "Italy")
@@ -36,6 +39,7 @@ r17 = Resort.create(name: "Sierra Nevada", description: "")
 
 c1.resorts << r1
 c1.resorts << r2
+c4.resorts << r3
 c2.resorts << r6
 c2.resorts << r7
 c2.resorts << r8

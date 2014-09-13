@@ -1,0 +1,4 @@
+<% @media.each do |media| %>
+  <%= image_tag media.image.detail.url %>
+  <%= video_tag media.video, :size => "400x400", :controls => true, :poster => "http://cdn3.coresites.mpora.com/skiunion/wp-content/uploads/2011/10/salomon-flash.jpg" %>
+<% end %>

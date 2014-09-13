@@ -13,10 +13,9 @@
 
 <% @resorts.each do |resort| %>
   <tr>
-    <td><%= link_to resort.name, resort %></td>
+    <td><%= link_to resort, resort %></td>
     <td><%= resort.description %></td>
-    <td><%#= resort.country.name %></td> 
-    <!-- fix later, need to validate => presence of country needs to be present -->
+    <td><%= resort.country.name %></td> 
     <td><%= image_tag resort.image if resort.image.present? %></td>
     <td><%= link_to 'Edit', edit_resort_path(resort) %></td>
     <td><%= link_to 'Destroy', resort, method: :delete, data: { confirm: 'Are you sure?' } %></td>

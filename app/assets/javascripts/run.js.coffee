@@ -9,7 +9,7 @@ $ ->
 
 load_run = (id,map) ->
   callback = (data) -> display_on_map(data,map)
-  $.get '/runs/'+id+'.json', {}, callback, 'json'
+  $.get '/runs/' + id + '.json', {}, callback, 'json'
 
 display_on_map = (data,map) ->
   decoded_path = google.maps.geometry.encoding.decodePath(data.polyline)
