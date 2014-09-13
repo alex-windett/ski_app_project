@@ -20,12 +20,12 @@ function geoFindMe() {
       latitude: latitude,
       longitude: longitude, 
       elevation: altitude, 
-      segment_id: run_id 
+      segment_id: 1  
       }
 
 
 
-    output.innerHTML = '<p>Your speed is ' + speed + ' m/s <br>Your at an altitude of ' + altitude + ' meters <br>Latitude is ' + latitude + '° <br>Longitude is ' + longitude  + '°</p>';
+    output.innerHTML = '<p>Current speed of ' + speed + ' m/s <br>Current altitude of ' + altitude + ' meters <br>Current latitude is ' + latitude + '° <br>Current longitude is ' + longitude  + '°</p>';
 
   var run = {
       name: document.getElementById("name").value,

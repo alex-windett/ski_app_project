@@ -9,4 +9,6 @@ class Resort < ActiveRecord::Base
 
   validate :name, presence: true
   validate :country_id, presence: true
+
+  mount_uploader :image, ResortImageUploader
 end
