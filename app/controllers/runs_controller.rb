@@ -27,6 +27,7 @@
 
     respond_to do |format|
       format.html # show.html.erb
+      format.pdf
       format.json { 
         render :json => @run.to_json(:methods => [:polyline],:only => [:name]) 
         }    

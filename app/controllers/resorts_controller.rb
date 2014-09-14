@@ -2,7 +2,11 @@ class ResortsController < ApplicationController
   # GET /resorts
   # GET /resorts.json
   def index
+
+
+
     @resorts = Resort.order(:name).page(params[:page])
+    
 
     respond_to do |format|
       format.html # index.html.erb

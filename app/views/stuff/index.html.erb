@@ -2,12 +2,12 @@
    
 <% @media.each do |media| %>
   <div class='media_index_photo'>
-    <li><%= image_tag media.image %></li>
-    <li><%= media.run.name %></li>
+    <li><%= link_to (image_tag media.image) if media.image.present? %></li>
+    <li><%= media.run.name if media.image.present? %></li>
   </div>
 
   <div class='media_index_video'>
-    <li><%= video_tag media.video, :controls => true, :poster => "http://cdn3.coresites.mpora.com/skiunion/wp-content/uploads/2011/10/salomon-flash.jpg" %></li>
-    <li><%= media.run.name %></li>
+    <li><%= link_to(video_tag media.video, :controls => true, :poster => "http://cdn3.coresites.mpora.com/skiunion/wp-content/uploads/2011/10/salomon-flash.jpg") if media.video.present? %></li>
+    <li><%= media.run.name  if media.video.present? %></li>
   </div>
 <% end %>
