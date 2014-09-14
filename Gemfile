@@ -24,6 +24,7 @@ gem 'kaminari' #pagination
 gem 'bootstrap-kaminari-views'
 gem 'ransack'
 gem 'prawn_rails'
+gem 'cancan'
 
 # Gems used only for assets and not required
 # in production environments by default.

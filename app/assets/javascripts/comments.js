@@ -39,7 +39,7 @@ function destroyComment(){
   $this = $(this)
   commentId = $this.data("id");
   request("DELETE", "/comments/" + commentId, null).success(function(data){
-    $this.parent().remove()
+    $this.parent().parent().remove()
   })
 }
 
