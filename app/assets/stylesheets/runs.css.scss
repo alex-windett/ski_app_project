@@ -5,9 +5,13 @@
 .run_details {
   right: 15%;
   width: 21%;
-  border: 2px solid black;
-  padding: 1%;
-  position: fixed;
+  /*border: 2px solid black;*/
+  /*padding: 1%;*/
+  position: absolute;
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 #map_canvas {

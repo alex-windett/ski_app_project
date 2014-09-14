@@ -1,20 +1,20 @@
 <h1>Listing resorts</h1>
 
 <table>
-  <tr>
-    <th>Name</th>
+<!--   <tr>
+    <th></th>
     <th>Description</th>
-    <th>Country</th>
+    <th></th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-
+ -->
 <% @resorts.each do |resort| %>
   <tr>
-    <td><%= link_to resort.name, resort %></td>
-    <td><%= resort.description %></td>
-    <td><%= resort.country.name %></td> 
+    <td><%= link_to resort.name, resort %>, <%= resort.country.name %></td>
+    <!-- <td><%= resort.description %></td> -->
+    <!-- <td><%= resort.country.name %></td>  -->
     <td><%= link_to 'Edit', edit_resort_path(resort) %></td>
     <td><%= link_to 'Destroy', resort, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>

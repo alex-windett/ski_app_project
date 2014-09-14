@@ -2,15 +2,20 @@
 
   <h1><%= @user.name %></h1>
   
+  <%= image_tag @user.photo if @user.photo.present? %>
+
   <p>
     <b> Date of Birth:
     <%= @user.dob %> </b>
   </p>
 
   <p>
-    <b> Image:
-    <%= image_tag @user.photo if @user.photo.present? %> </b>
+    <b>Uploaded Runs: 
+      <% @runs.each do |run| %>
+        <%  if run.user.id == @user.id %>
+          <%= link_to run.name, run %>
+        <% end %>
+      <% end %></b>
   </p>
      
-    <%= link_to 'Edit Profile', edit_user_registration_path %>
-    <%= link_to 'Back', user_index_path %>
+    <%= link_to 'Edit Profile', edit_user_registration_path %> |

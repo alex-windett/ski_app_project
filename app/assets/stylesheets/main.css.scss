@@ -1,8 +1,7 @@
 $blue:  #2DB6CF;
 $dark:  #444444;
 $white: #FFFFFF;
-
-
+$basecolor: #537BF7;
 
 .main_content {
   width: 70%;
@@ -15,7 +14,7 @@ $white: #FFFFFF;
     padding: 2%;
     display: inline-block;
     width: 28%;
-    border: solid 2px black;
+    background-color: $basecolor;
   }
 }
 
@@ -33,7 +32,7 @@ tbody tr th, td {
 }
 
 #country_list {
-  border: 2px solid black;
+  border-right: 2px solid black;
   padding: 2%;
   float: left;
   width: 44%;
@@ -43,7 +42,7 @@ tbody tr th, td {
 }
 
 #selected_country{
-  border: 2px solid black;
+  /*border: 2px solid black;*/
   padding: 2%;
   float: right;
   width: 44%;
