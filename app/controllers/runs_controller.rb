@@ -26,6 +26,7 @@
     @segments = @run.segments
     @media = @run.mediums
     @markers = Marker.all 
+    @comments = Comment.all
 
     respond_to do |format|
       format.html # show.html.erb

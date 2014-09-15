@@ -8,7 +8,7 @@ function request(method, url, data){
 }
 
 function getComments(){
-  request("GET", "/comments", null).success(function(data){
+  request("GET", "/comments?runId=" + $('#run_id').html, null).success(function(data){
     $.each(data, function(i, comment){
       appendNewComment(comment)
     })
@@ -30,7 +30,7 @@ function createComment(){
 function appendNewComment(data){
 
   $('<li class="newComment">' +
-    '<label>'+ data.content +'</label>' +
+    '<label>'+ data.content + '</label>' +
     '<button id="destroyComment" data-id="'+ data.id +'">Delete Comment</button>'+
     '</li>').prependTo("#commentsOutput")
 }
