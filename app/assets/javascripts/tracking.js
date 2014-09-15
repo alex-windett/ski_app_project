@@ -21,19 +21,17 @@
               url: "/segments",
               dataType: "json",
               data: { segment: segment }
-             }).success(function(){
-              segmentId = data.id
-              console.log(segmentId)
-              console.log(runId)
-             })
+              }).success(function(){
+                segmentId = data.id
+                console.log(segmentId + 'segment')
+                console.log(runId + 'run')
+                })
           }
          })
 
-       
-      $('#start_tracking').show();
+         $('#start_tracking').show();
       $('#track').hide()
       $('.geo_data').hide()
-    
     }      
 // -----------------------------------
 // find location and keep tracking
@@ -77,10 +75,8 @@ function geoFindMe() {
 
   id = navigator.geolocation.watchPosition(success, error, options);
 
-
-        $('#stop_tracking').show();
+ $('#stop_tracking').show();
         $('#start_tracking').hide()
-    
 
 }
 
