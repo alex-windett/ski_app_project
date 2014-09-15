@@ -1,4 +1,4 @@
-/*
+	/*
 
 Responsive Mobile Menu v1.0
 Plugin URI: responsivemobilemenu.com
@@ -34,7 +34,7 @@ License: CC BY 3.0 http://creativecommons.org/licenses/by/3.0/
 .rmm ul {
 	display:block;
 	width:auto !important;
-	margin:0 auto h !important;
+	margin:0 auto !important;
 	overflow:hidden;
 	list-style:none;
 }
@@ -60,6 +60,7 @@ License: CC BY 3.0 http://creativecommons.org/licenses/by/3.0/
 	position:relative;
 	overflow:hidden;
 	margin:0 auto !important;
+	border-radius: 5px;
 }
 .rmm-button:hover {
 	cursor:pointer;

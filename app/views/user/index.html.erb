@@ -3,3 +3,5 @@
 <% @user.each do |user| %>
   <%= link_to user.name, user %>
 <% end %>
+
+<%= paginate @user %>

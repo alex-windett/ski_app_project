@@ -1,7 +1,6 @@
 <h1>Track A New Run</h1>
 
   <div class="geo_data">
-
     <p>Name: </p> 
     <input id="name">
     <br />
@@ -13,8 +12,14 @@
     <br /> 
     <p>Resort: </p>
     <input id="resort">
-    <p><button onclick="geoFindMe()">Start Tracking</button></p>
-    <div id="output"></div>
-    <button onclick="clearWatch()">Stop Tracking</button>
   </div>
+
+<p><button onclick="create()">Create Run</button></p>
+<p><button onclick="geoFindMe()">Start Tracking</button></p>
+<div id="output"></div>
+<button onclick="clearWatch()">Stop Tracking</button>
+
+<div id='segmentId'></div>
+
+<div id='runId'></div>
 

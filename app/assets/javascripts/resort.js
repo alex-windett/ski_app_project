@@ -7,7 +7,6 @@ $(document).ready(function(){
     url: "http://api.worldweatheronline.com/free/v1/ski.ashx?key=fc291ebd60c20935283da4510cd776a66d335e1d&q=" + val + "&format=json",
     dataType: "json"
   }).success(function(data){
-    console.log(data)
     var weather = data.data.weather[0]
     $("#weather")
     .append("<h3>Todays Weather</h3>")

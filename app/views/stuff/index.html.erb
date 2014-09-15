@@ -1,13 +1,10 @@
-<h1>Browse Photos and Videos</h1>
-   
 <% @media.each do |media| %>
   <div class='media_index_photo'>
     <li><%= link_to (image_tag media.image) if media.image.present? %></li>
-    <li><%= media.run.name if media.image.present? %></li>
+    <li><%#= media.run.name if media.image.present? %></li>
+    <li><%= link_to(video_tag media.video, :controls => true, :poster => "http://cdn3.coresites.mpora.com/skiunion/wp-content/uploads/2011/10/salomon-flash.jpg") if media.video.present? %></li>
+    <li><%#= media.run.name  if media.video.present? %></li>
   </div>
 
-  <div class='media_index_video'>
-    <li><%= link_to(video_tag media.video, :controls => true, :poster => "http://cdn3.coresites.mpora.com/skiunion/wp-content/uploads/2011/10/salomon-flash.jpg") if media.video.present? %></li>
-    <li><%= media.run.name  if media.video.present? %></li>
-  </div>
+
 <% end %>

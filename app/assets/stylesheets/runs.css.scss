@@ -27,7 +27,7 @@
    img {
     width: 48%;
     height: auto;
-    padding: 2% 2% 0 0;
+    /*padding: 2% 2% 0 0;*/
    }
    video {
     width: 48%;
@@ -55,4 +55,10 @@
         font-family: Arial;
         font-size: 9pt;
     }
+}
+
+#comments {
+  textarea {
+    width: 63%;
+  }
 }

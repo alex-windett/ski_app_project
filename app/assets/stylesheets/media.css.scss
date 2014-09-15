@@ -1,18 +1,9 @@
 .media_index_photo {
   list-style: none;
   float: left;
-  width: 48%;
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-.media_index_video {
-  list-style: none;
-  float: right;
-  width: 48%;
-  video {
+  width: 33.3%;
+  img, video {
+    margin-top: -18px;
     width: 100%;
     height: auto;
   }
