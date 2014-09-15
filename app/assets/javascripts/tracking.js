@@ -20,7 +20,6 @@
               url: "/segments",
               dataType: "json",
               data: { segment: segment }
-              // success: logmarker
              }).success(function(){
               segmentId = data.id
               console.log(segmentId)
@@ -29,8 +28,6 @@
           }
          })
     }      
-
-
 // -----------------------------------
 // find location and keep tracking
 
@@ -78,8 +75,7 @@ function geoFindMe() {
 // stop watching location
 
  function clearWatch() {
-          var run_id =  $('#run_id').html()
           navigator.geolocation.clearWatch(id);
           document.getElementById('output').style.display='none'
-          window.location.replace("/runs/" + 1)
+          window.location.replace("/runs/" + runId)
   }
