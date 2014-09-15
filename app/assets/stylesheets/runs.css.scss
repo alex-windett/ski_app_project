@@ -3,8 +3,8 @@
 }
 
 .run_details {
-  right: 15%;
-  width: 21%;
+  right: 7%;
+  width: 24%;
   /*border: 2px solid black;*/
   /*padding: 1%;*/
   position: absolute;
@@ -15,14 +15,14 @@
 }
 
 #map_canvas {
-  width: 66%;
+  width: 70%;
   height: 500px;
   float: left;
 }
 
 .media {
   margin-top: 2%;
-  width: 66%;
+  width: 70%;
   padding-bottom: 2%;
    img {
     width: 48%;
@@ -42,7 +42,7 @@
 .graph {
   margin: 0 auto 0 auto;
     path {
-    stroke: red;
+    stroke: white;
     stroke-width: 2;
     fill: none;
     }

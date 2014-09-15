@@ -5,28 +5,34 @@ $basecolor: #537BF7;
 
 body {
   padding: 2% 0 2% 0; 
-  background: #2F3238;
+  background: #FF706A;
   color: #F8FFFF;
   font-family: 'Marmelad', sans-serif;
   /*background: complement($basecolor)*/
 }
 
 .main_content {
-  width: 65%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .home {
   width: 100%;
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   .home_info {
     border-radius: 10px;
     padding: 2%;
-    display: inline-block;
-    width: 28%;
+    display: block;
+    margin-top: 2%;
+    width: 20%;
     background-color: $basecolor;
   }
 }
+
 
 a {
   text-decoration: none;
@@ -43,7 +49,7 @@ tbody tr th, td {
 
 
 #country_list {
-  border-right: 2px solid black;
+  border-right: 2px solid white;
   padding: 2%;
   float: left;
   width: 44%;
@@ -75,10 +81,10 @@ button {
   -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
   -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
   box-shadow:inset 0px 1px 0px 0px #ffffff;
-  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
-  background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-  background-color:#ededed;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #d1cbca), color-stop(1, #dfdfdf) );
+  background:-moz-linear-gradient( center top, #d1cbca 5%, #dfdfdf 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d1cbca', endColorstr='#dfdfdf');
+  background-color:#d1cbca;
   -webkit-border-top-left-radius:6px;
   -moz-border-radius-topleft:6px;
   border-top-left-radius:6px;
@@ -94,7 +100,7 @@ button {
   text-indent:0;
   border:1px solid #dcdcdc;
   display:inline-block;
-  color:#777777;
+  color:#FF706A;
   font-family:arial;
   font-size:15px;
   font-weight:bold;

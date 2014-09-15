@@ -1,11 +1,23 @@
 .media_index_photo {
   list-style: none;
   float: left;
-  width: 33.3%;
+  width: 49.5%;
+  margin-left: 2px;
   img, video {
-    margin-top: -18px;
     width: 100%;
     height: auto;
+    filter: graysale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+  }
+  img:hover {
+     filter: sepia(0%);
+    -webkit-filter: sepia(0%);
+    -moz-filter: sepia(0%);
+    -o-filter: sepia(0%);
+    -ms-filter: sepia(0%);
   }
 }
 

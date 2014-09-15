@@ -24,7 +24,7 @@ License: CC BY 3.0 http://creativecommons.org/licenses/by/3.0/
 	font-family:Arial;
 }
 .rmm a {
-	color:black;
+	color:white;
 	text-decoration:none;
 }
 .rmm .rmm-main-list, .rmm .rmm-main-list li {
@@ -117,7 +117,7 @@ border-bottom-right-radius: 5px;
 .rmm.sapphire .rmm-toggled-controls {
 	display:block;
 	height:36px;
-	color:black;
+	color:white;
 	text-align:left;
 	position:relative;
 	background-color: #537BF7;
@@ -129,7 +129,7 @@ border-bottom-right-radius: 5px;
 	top:9px;
 	left:15px;
 	font-size:16px;
-	color:black;
+	color:white;
 	/*text-shadow:1px 1px 1px #3e587b;*/
 }
 .rmm.sapphire .rmm-button {
@@ -139,7 +139,7 @@ border-bottom-right-radius: 5px;
 	top:7px;
 	width:20px;
 	padding:0px 7px 0px 7px;
-	border:1px solid black;
+	border:1px solid white;
 	border-radius:3px;
 	background-color:#537BF7;
 	background-position:top;
@@ -149,7 +149,7 @@ border-bottom-right-radius: 5px;
 	display:block;
 	margin:4px 0px 4px 0px;
 	height:2px;
-	background:black;
+	background:white;
 	width:20px;
 }
 .rmm.sapphire .rmm-toggled ul li a {
@@ -158,17 +158,17 @@ border-bottom-right-radius: 5px;
 	background-color:#537BF7;
 	text-align:center;
 	padding:10px 0px 10px 0px;
-	border-bottom:1px solid black;
-	border-top:1px solid black;
+	border-bottom:1px solid white;
+	border-top:1px solid white;
 	text-/*shadow*/:1px 1px 1px #333333;
 }
 .rmm.sapphire .rmm-toggled ul li a:active {
 	background-color:#3c5779;
-	border-bottom:1px solid black;
-	border-top:1px solid black;
+	border-bottom:1px solid white;
+	border-top:1px solid white;
 }
 .rmm.sapphire .rmm-toggled ul li:first-child a { 
-	border-top:1px solid black !important;
+	border-top:1px solid white !important;
 }
 
 
