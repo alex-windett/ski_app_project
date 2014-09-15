@@ -4,7 +4,7 @@
   # GET /runs
   # GET /runs.json
   def index
-    @runs = Run.all
+    @runs = Run.order(:created_at).page(1).per(20)
     @markers = Marker.all
     
     respond_to do |format|

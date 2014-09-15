@@ -28,6 +28,12 @@
              })
           }
          })
+
+       
+      $('#start_tracking').show();
+      $('#track').hide()
+      $('.geo_data').hide()
+    
     }      
 // -----------------------------------
 // find location and keep tracking
@@ -70,6 +76,12 @@ function geoFindMe() {
   };
 
   id = navigator.geolocation.watchPosition(success, error, options);
+
+
+        $('#stop_tracking').show();
+        $('#start_tracking').hide()
+    
+
 }
 
 // -------------------

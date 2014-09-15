@@ -2,8 +2,11 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.all
+    @comments = Comment.where(run_id: params[:runId])
+# binding.pry    # if params["runId"]
+#     #     # do some logic 
 
+#     # end
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @comments }

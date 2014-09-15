@@ -49,11 +49,12 @@
  
     line {
         stroke: white;
+        stroke-width: 2;
     }
      
     text {
-        font-family: Arial;
-        font-size: 9pt;
+        /*font-family: Arial;*/
+        font-size: 10;
         color: white;
     }
 }
@@ -61,5 +62,12 @@
 #comments {
   textarea {
     width: 63%;
+  }
+  li {
+    list-style: none;
+  }
+  button {
+    margin-top: 10px;
+    margin-right: 20px;
   }
 }
