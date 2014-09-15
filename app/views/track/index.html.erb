@@ -8,18 +8,16 @@
     <input id="description" type="textarea">
     <br />
     <p>Rating: </p>
-    <input id="rating" type="number">
+    <input id="rating" type="number" style='width:50px'>
     <br /> 
     <p>Resort: </p>
-    <input id="resort">
+    <div id="resort"><%= collection_select :resort, :id, Resort.all, :id, :name %></div>
   </div>
 
-<p><button id='track' onclick="create()">Create Run</button></p>
-<p><button onclick="geoFindMe()">Start Tracking</button></p>
+<br />
+<button id='track' onclick="create()">Create Run</button> <button onclick="geoFindMe()">Start Tracking</button> <button onclick="clearWatch()">Stop Tracking</button>
 <div id="output"></div>
-<button onclick="clearWatch()">Stop Tracking</button>
 
 <div id='segmentId'></div>
 
 <div id='runId'></div>
-

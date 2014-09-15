@@ -4,7 +4,7 @@
       name: document.getElementById("name").value,
       rating: document.getElementById("rating").value,
       description: document.getElementById("description").value,
-      resort_id: 1
+      resort_id: parseInt($('#resort :selected').attr('value')),
     }
 
         $.ajax({
@@ -13,6 +13,7 @@
           dataType: "json",
           data: { run: runInfo},
           success: function(data){
+              console.log(data)
               runId = data.id
               segment = { run_id: runId }
               $.ajax({
