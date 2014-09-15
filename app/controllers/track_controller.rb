@@ -7,7 +7,7 @@ class TrackController < ApplicationController
     @segment = Segment.new(params[:segment])
 
     @run.save
-    @segment.save
+    # @segment.save
 
     respond_to do |format|
       format.html 
