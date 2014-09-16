@@ -40,7 +40,7 @@ group :assets do
 end
 
 group :development do
-    gem 'letter_opener'
+    gem 'brakeman', :require => false
     gem 'pry-rails'
     gem 'pry-stack_explorer'
     gem 'binding_of_caller'
