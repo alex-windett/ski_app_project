@@ -1,3 +1,15 @@
+function checkForm() {
+  var name = document.forms["trackingForm"]["name"].value;
+  var rating = document.forms["trackingForm"]["rating"].value;
+    if (name == "" ) {
+        alert("Provide a name to create a run");
+        return false;
+    }
+    else {
+      create()
+    }
+}
+
 // creating a new run and a segment
   function create() {
     var runInfo = {

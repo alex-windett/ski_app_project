@@ -8,7 +8,7 @@ class Run < ActiveRecord::Base
   has_many :comments
   has_many :mediums
 
-  validates :rating, :numericality => { :less_than_or_equal_to => 5 }
+  validates :rating, :numericality => { :less_than_or_equal_to => 5, :allow_blank => true }
   validate :name, presence: true
   validate :resort_id, presence: true
   validate :gpx, presence: true
