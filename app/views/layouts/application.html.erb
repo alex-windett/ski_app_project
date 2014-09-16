@@ -8,8 +8,10 @@
   <%= run_id_to_js(@run.id) if @run %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <link  href="http://fotorama.s3.amazonaws.com/4.6.2/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+  <script src="http://fotorama.s3.amazonaws.com/4.6.2/fotorama.js"></script>
   <link href="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.0.3/css/nanogallery.min.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.0.3/jquery.nanogallery.min.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Marmelad' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 </head>
@@ -17,11 +19,9 @@
         <div class='rmm' data-menu-style="sapphire">
             <ul>
                 <li><%= link_to "Home", page_path('home') %></li>
-                <li><%= link_to "Countries", countries_path %></li>
                 <li><%= link_to "Resorts", resorts_path %></li>
                 <li> <%= link_to "Track", track_path %></li>
-                <li><%= link_to "Runs", runs_path %></li>
-                <li><%= link_to "Members", user_index_path %></li>
+                <!-- <li><%#= link_to "Members", user_index_path %></li> -->
                 <li><%= link_to "Media", media_path %></li>
                 <li>
                   <% if user_signed_in? %>
