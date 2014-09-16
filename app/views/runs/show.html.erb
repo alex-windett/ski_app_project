@@ -10,9 +10,10 @@
   <p>Rating: <%= @run.rating %></p>
   <p>Uploaded by: <%= @run.user.name %></p>
   
-  <%= link_to 'Add New Media to this run', new_run_medium_path(@run) %> |
-  <%= link_to 'Edit', edit_run_path(@run) %> |
-  <%= link_to 'Back', runs_path %> |
+  <% if can? :update, @run %><%= link_to 'Add New Media to this run', new_run_medium_path(@run) %><% end %> <br>
+  <% if can? :update, @run %><%= link_to 'Edit', edit_run_path(@run) %><% end %>  <br>
+  <% if can? :destroy, @run %><%= link_to 'Cancel Account', @run, method: :delete, data: { confirm: 'Are you sure?' } %><% end %>
+  <%= link_to 'Back', runs_path %> <br>
   <%= link_to "Download the PDF", run_path(@run, :format => 'pdf') %>
 </aside>
 

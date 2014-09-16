@@ -5,15 +5,15 @@
 
   <% if media.video.present? %>
     <div class="box col2">
-      <%= link_to (image_tag media.image) if media.image.present? %>
+      <%= link_to (image_tag media.image), run_path(media.run) if media.image.present? %>
       <%= media.run.name if media.image.present? %>
     </div>
   <% end %>
 
   <% if media.video.present? %>
     <div class="box col3">
-      <%= link_to(video_tag media.video, :controls => true, :poster => "http://cdn3.coresites.mpora.com/skiunion/wp-content/uploads/2011/10/salomon-flash.jpg") if media.video.present? %>
-      <%= media.run.name  if media.video.present? %>
+      <%= link_to (video_tag media.video, :controls => true, :poster => "http://cdn3.coresites.mpora.com/skiunion/wp-content/uploads/2011/10/salomon-flash.jpg"), run_path(media.run) if media.video.present? %>
+      <%= link_to media.run.name if media.video.present? %>
     </div>
   <% end %>
 
@@ -23,7 +23,7 @@
 
   <% if media.image.present? %>
    <div class="box col2">
-      <%= link_to (image_tag media.image) if media.image.present? %>
+      <%= link_to (image_tag media.image), run_path(media.run) if media.image.present? %>
       <%= media.run.name if media.image.present? %>
     </div>
   <% end %>  
@@ -42,29 +42,29 @@
 
     <% if media.image.present? %>
     <div class="box col3">
-      <%= link_to (image_tag media.image) if media.image.present? %>
+      <%= link_to (image_tag media.image), run_path(media.run) if media.image.present? %>
       <%= media.run.name if media.image.present? %>
     </div>
   <% end %>
 
   <% if media.image.present? %>
    <div class="box col1">
-      <%= link_to (image_tag media.image) if media.image.present? %>
+      <%= link_to (image_tag media.image), run_path(media.run) if media.image.present? %>
       <%= media.run.name if media.image.present? %>
     </div>
   <% end %>  
 
   <% if media.video.present? %>
     <div class="box col4">
-      <%= link_to(video_tag media.video, :controls => true, :poster => "http://cdn3.coresites.mpora.com/skiunion/wp-content/uploads/2011/10/salomon-flash.jpg") if media.video.present? %>
+      <%= link_to (video_tag media.video, :controls => true, :poster => "http://cdn3.coresites.mpora.com/skiunion/wp-content/uploads/2011/10/salomon-flash.jpg"), run_path(media.run) if media.video.present? %>
       <%= media.run.name  if media.video.present? %>
     </div>
   <% end %>
 
   <% if media.image.present? %>
    <div class="box col5">
-      <%= link_to (image_tag media.image) if media.image.present? %>
-      <%= media.run.name if media.image.present? %>
+      <%= link_to (image_tag media.image), run_path(media.run) if media.image.present? %>
+      <%= link_to media.run.name if media.image.present? %>
     </div>
   <% end %>  
 
