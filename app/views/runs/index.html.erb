@@ -19,8 +19,8 @@
     <td><%= run.resort.name %></td>
     <td><%= run.rating %></td>
     <td><%= run.created_at.strftime("%b %d, %Y")  %></td>
-    <td><%= link_to 'Edit', edit_run_path(run) %></td>
-    <td><%= link_to 'Destroy', run, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><% if can? :update, resort %><%= link_to 'Edit', edit_run_path(run) %><% end %></td>
+    <td><% if can? :destroy, resort %><%= link_to 'Destroy', run, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></td>
   </tr>
 <% end %>
 </table>

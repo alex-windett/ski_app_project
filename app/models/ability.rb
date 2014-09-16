@@ -16,7 +16,7 @@ class Ability
         u.id == user.id
       end
 
-      can [:edit, :update, :destroy], Media do |media|
+      can [:edit, :update, :destroy], Medium do |media|
         media.user_id == user.id
       end
 

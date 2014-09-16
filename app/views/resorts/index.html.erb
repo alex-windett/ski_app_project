@@ -15,8 +15,8 @@
     <td><%= link_to resort.name, resort %>, <%= resort.country.name %></td>
     <!-- <td><%= resort.description %></td> -->
     <!-- <td><%= resort.country.name %></td>  -->
-    <td><%= link_to 'Edit', edit_resort_path(resort) %></td>
-    <td><%= link_to 'Destroy', resort, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><% if can? :update, resort %><%= link_to 'Edit', edit_resort_path(resort) %><% end %></td>
+    <td><% if can? :destroy, resort %><%= link_to 'Destroy', resort, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></td>
   </tr>
 <% end %>
 </table>

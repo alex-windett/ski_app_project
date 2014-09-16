@@ -6,8 +6,6 @@ class TrackController < ApplicationController
     @run = Run.new(params[:run])
     @segment = Segment.new(params[:segment])
 
-    @run.save
-
     respond_to do |format|
       format.html 
       format.json { render :json => @run }    

@@ -1,5 +1,4 @@
-  class RunsController < ApplicationController
-
+class RunsController < ApplicationController
     before_filter :authenticate_user! 
   # GET /runs
   # GET /runs.json
