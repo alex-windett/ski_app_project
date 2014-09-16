@@ -1,10 +1,79 @@
-<% @media.each do |media| %>
-  <div class='media_index_photo'>
-    <li><%= link_to (image_tag media.image) if media.image.present? %></li>
-    <li><%#= media.run.name if media.image.present? %></li>
-    <li><%= link_to(video_tag media.video, :controls => true, :poster => "http://cdn3.coresites.mpora.com/skiunion/wp-content/uploads/2011/10/salomon-flash.jpg") if media.video.present? %></li>
-    <li><%#= media.run.name  if media.video.present? %></li>
-  </div>
 
+<% @media.each do |media| %>
+<div id="container" class="clearfix">
+
+
+  <% if media.video.present? %>
+    <div class="box col2">
+      <%= link_to (image_tag media.image) if media.image.present? %>
+      <%= media.run.name if media.image.present? %>
+    </div>
+  <% end %>
+
+  <% if media.video.present? %>
+    <div class="box col3">
+      <%= link_to(video_tag media.video, :controls => true, :poster => "http://cdn3.coresites.mpora.com/skiunion/wp-content/uploads/2011/10/salomon-flash.jpg") if media.video.present? %>
+      <%= media.run.name  if media.video.present? %>
+    </div>
+  <% end %>
+
+    <div class="box col3">
+      <p><img src="http://ichef.bbci.co.uk/naturelibrary/images/ic/credit/640x395/m/mo/mountain/mountain_1.jpg"></p>
+    </div>
+
+  <% if media.image.present? %>
+   <div class="box col2">
+      <%= link_to (image_tag media.image) if media.image.present? %>
+      <%= media.run.name if media.image.present? %>
+    </div>
+  <% end %>  
+
+   <!-- <div class="box col2">
+      <p>Vestibulum volutpat, lacus a ultrices sagittis,</p>
+      <p>Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula  </p>
+    </div> -->
+
+  <% if media.image.present? %>
+    <div class="box col2">
+      <p><img src="http://www.frenchpropertyinvestor.com/img/ski1.jpg"></p>
+    </div>
+  <% end %>
+
+
+    <% if media.image.present? %>
+    <div class="box col3">
+      <%= link_to (image_tag media.image) if media.image.present? %>
+      <%= media.run.name if media.image.present? %>
+    </div>
+  <% end %>
+
+  <% if media.image.present? %>
+   <div class="box col1">
+      <%= link_to (image_tag media.image) if media.image.present? %>
+      <%= media.run.name if media.image.present? %>
+    </div>
+  <% end %>  
+
+  <% if media.video.present? %>
+    <div class="box col4">
+      <%= link_to(video_tag media.video, :controls => true, :poster => "http://cdn3.coresites.mpora.com/skiunion/wp-content/uploads/2011/10/salomon-flash.jpg") if media.video.present? %>
+      <%= media.run.name  if media.video.present? %>
+    </div>
+  <% end %>
+
+  <% if media.image.present? %>
+   <div class="box col5">
+      <%= link_to (image_tag media.image) if media.image.present? %>
+      <%= media.run.name if media.image.present? %>
+    </div>
+  <% end %>  
+
+
+    <!-- <div class="box col2">
+      <p>adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus.</p>
+      <p>Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed augue.  Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
+    </div>
+
+</div> 
 
 <% end %>

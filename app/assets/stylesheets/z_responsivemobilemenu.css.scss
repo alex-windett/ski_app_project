@@ -1,3 +1,5 @@
+$orange: #de3c2d;
+
 	/*
 
 Responsive Mobile Menu v1.0
@@ -21,7 +23,6 @@ License: CC BY 3.0 http://creativecommons.org/licenses/by/3.0/
 }
 .rmm * {
 	-webkit-tap-highlight-color:transparent !important;
-	font-family:Arial;
 }
 .rmm a {
 	color:white;
@@ -82,15 +83,15 @@ License: CC BY 3.0 http://creativecommons.org/licenses/by/3.0/
 	display:inline-block;
 	padding:8px 30px 8px 30px;
 	margin:0px -3px 0px -3px;
-	font-size:15px;
+	font-size:20px;
 	/*text-shadow:1px 1px 1px #3e587b;*/
-	background-color:#537BF7;
+	background-color:$orange;
 	border-left:1px solid #3e587b;
 	background-image:url('../rmm-img/sapphire-menu-bg.png');
 	background-repeat:repeat-x;
 }
 .rmm.sapphire .rmm-main-list li a:hover {
-	background:#3e597b;
+	background:lighten($orange, 10%);
 }
 .rmm.sapphire .rmm-main-list li:first-child a {
 -webkit-border-top-left-radius: 5px;
@@ -110,7 +111,7 @@ border-bottom-right-radius: 5px;
 }
 .rmm.sapphire .rmm-toggled {
 	width:95%;
-	background-color:#537BF7;
+	background-color:$orange;
 	min-height:36px;
 	/*border-radius:6px;*/
 }
@@ -120,7 +121,7 @@ border-bottom-right-radius: 5px;
 	color:white;
 	text-align:left;
 	position:relative;
-	background-color: #537BF7;
+	background-color: $orange;
 	background-repeat:repeat-x;
 	border-radius:5px;
 }
@@ -141,7 +142,7 @@ border-bottom-right-radius: 5px;
 	padding:0px 7px 0px 7px;
 	border:1px solid white;
 	border-radius:3px;
-	background-color:#537BF7;
+	background-color:$orange;
 	background-position:top;
 }
 
@@ -155,15 +156,14 @@ border-bottom-right-radius: 5px;
 .rmm.sapphire .rmm-toggled ul li a {
 	display:block;
 	width:100%;
-	background-color:#537BF7;
+	background-color:$orange;
 	text-align:center;
 	padding:10px 0px 10px 0px;
 	border-bottom:1px solid white;
 	border-top:1px solid white;
-	text-/*shadow*/:1px 1px 1px #333333;
 }
 .rmm.sapphire .rmm-toggled ul li a:active {
-	background-color:#3c5779;
+	background-color:lighten($orange, 10%);
 	border-bottom:1px solid white;
 	border-top:1px solid white;
 }
@@ -175,7 +175,7 @@ border-bottom-right-radius: 5px;
 /* MINIMAL STYLE */
 
 .rmm.minimal a {
-	color:#3c5779;
+	color:$orange;
 }
 .rmm.minimal a:hover {
 	opacity:0.7;
@@ -184,7 +184,7 @@ border-bottom-right-radius: 5px;
 	display:inline-block;
 	padding:8px 30px 8px 30px;
 	margin:0px -3px 0px -3px;
-	font-size:15px;
+	font-size:20px;
 }
 .rmm.minimal .rmm-toggled {
 	width:95%;
@@ -201,7 +201,7 @@ border-bottom-right-radius: 5px;
 	position:relative;
 	top:9px;
 	left:9px;
-	font-size:16px;
+	font-size:20px;
 	color:#33333;
 }
 .rmm.minimal .rmm-button {

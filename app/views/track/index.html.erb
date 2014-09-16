@@ -1,24 +1,4 @@
 <h1>Track A New Run</h1>
-<!-- 
-  <div class="geo_data">
-    <p>Name: </p> 
-    <input id="name" require>
-    <br />
-    <p>Description: </p> 
-    <input id="description" type="textarea" required>
-    <br />
-    <p>Rating: </p>
-    <input id="rating" type="number" style='width:50px' required>
-    <br /> 
-    <p>Resort: </p>
-    <div id="resort"><%#= collection_select :resort, :id, Resort.all, :id, :name %></div>
-  </div>
-
-<br />
-<button id='track' onclick="create()">Create Run</button> <button onclick="geoFindMe()" style='display:none' id='start_tracking'>Start</button> <button onclick="clearWatch()" style='display:none' id='stop_tracking'>Stop</button>
-<div id="output"></div> -->
-
-
   <form name='trackingForm' class="geo_data">
     <p id='userId' style='display:none'><%= current_user.id %></p>
     <p>Name: </p> 
