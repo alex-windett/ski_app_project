@@ -1,5 +1,5 @@
 class Run < ActiveRecord::Base
-  attr_accessible :description, :name, :rating, :resort_id, :gpx
+  attr_accessible :description, :name, :rating, :resort_id, :gpx, :user_id
 
   belongs_to :resort
   belongs_to :user

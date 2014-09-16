@@ -14,6 +14,7 @@ function checkForm() {
   function create() {
     var runInfo = {
       name: document.getElementById("name").value,
+      user_id: document.getElementById("userId").innerHTML,
       rating: document.getElementById("rating").value,
       description: document.getElementById("description").value,
       resort_id: parseInt($('#resort :selected').attr('value')),

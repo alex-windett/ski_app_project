@@ -5,6 +5,7 @@ class CreateRuns < ActiveRecord::Migration
       t.text :description
       t.integer :resort_id
       t.float :rating
+      t.integer :user_id
 
       t.timestamps
     end

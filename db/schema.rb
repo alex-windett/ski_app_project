@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(:version => 20140910101228) do
     t.text     "description"
     t.integer  "resort_id"
     t.float    "rating"
+    t.integer  "user_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.string   "gpx_file_name"
