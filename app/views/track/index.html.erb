@@ -11,7 +11,7 @@
     <input id="rating" name='rating' type="number" style='width:50px' required>
     <br /> 
     <p>Resort: </p>
-    <div id="resort"><%= collection_select :resort, :id, Resort.all, :id, :name %></div>
+    <div id="resort"><%= collection_select :resort, :id, Resort.order("name ASC"), :id, :name %></div>
   </form>
 
 <br />
