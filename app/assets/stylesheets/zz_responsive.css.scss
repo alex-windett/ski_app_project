@@ -1,4 +1,4 @@
-@media only screen and (max-width : 720px) {
+@media only screen and (max-width : 480px) {
 
 $basecolor: #537BF7;
 
@@ -72,47 +72,87 @@ $basecolor: #537BF7;
 
 } 
 
-@media only screen and (max-width : 900px) {
+@media only screen and (max-width : 770px) {
 
   .col1 img {
 -webkit-filter: sepia(0%);
+  &:hover{
+    -webkit-filter: saturate(100%);
+    }
+
  }
 
 .col2 img {
 -webkit-filter: sepia(0%);
+  &:hover{
+    -webkit-filter: saturate(100%);
+    }
+
  }
 
 .col3 img {
 -webkit-filter: sepia(0%);
+  &:hover{
+    -webkit-filter: saturate(100%);
+    }
+
  }
 
 .col4 img {
 -webkit-filter: sepia(0%);
+  &:hover{
+    -webkit-filter: saturate(100%);
+    }
+
  }
 
 .col5 img {
 -webkit-filter: sepia(0%);
+  &:hover{
+    -webkit-filter: saturate(100%);
+    }
+
  }
 
 
 .col1 video { 
 -webkit-filter: sepia(0%);
+  &:hover{
+    -webkit-filter: saturate(150%);
+    }
+
  }
 
 .col2 video { 
 -webkit-filter: sepia(0%);
+  &:hover{
+    -webkit-filter: saturate(150%);
+    }
+
  }
 
 .col3 video {
 -webkit-filter: sepia(0%);
+  &:hover{
+    -webkit-filter: saturate(150%);
+    }
+
  }
 
 .col4 video {
 -webkit-filter: sepia(0%);
+  &:hover{
+    -webkit-filter: saturate(150%);
+    }
+
  }
 
 .col5 video {
 -webkit-filter: sepia(0%);
+  &:hover{
+    -webkit-filter: saturate(150%);
+    }
+
  }
 
 }

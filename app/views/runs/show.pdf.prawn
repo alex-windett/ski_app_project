@@ -8,7 +8,13 @@ prawn_document() do |pdf|
   pdf.text @run.user.name, size: 10
   pdf.move_down 10
   pdf.stroke_horizontal_rule
-   pdf.move_down 10
+   pdf.move_down 20
   pdf.text @run.description
-  pdf.move_down 10
+  pdf.move_down 30
+
+    @run.mediums.each do |media|
+      pdf.image open(media.image.url), width: 200
+      pdf.move_down 10
+    end
+
 end

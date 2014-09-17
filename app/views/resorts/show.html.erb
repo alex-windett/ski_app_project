@@ -26,6 +26,6 @@
   </p>
 
   <button id='button'><%= link_to 'New Run', new_run_path %></button>
-  <button id='button'><%= link_to 'Edit', edit_resort_path(@resort) %></button>
+  <% if can? :update, @resort %><button id='button'><%= link_to 'Edit', edit_resort_path(@resort) %><% end %></button>
   <button id='button'> <%= link_to 'Back', resorts_path %></button>
 </div>
