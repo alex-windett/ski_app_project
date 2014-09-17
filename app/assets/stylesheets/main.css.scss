@@ -36,7 +36,7 @@ body {
   text-align: center;
   border-radius: 10px;
   &:hover{
-    background-color: lighten($basecolor, 10%);
+    background-color: lighten($orange, 10%);
   };
   h2 {
     margin-top: 20%;

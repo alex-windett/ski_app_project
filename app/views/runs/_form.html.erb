@@ -28,7 +28,7 @@
     <%= f.collection_select :resort_id, Resort.order('name ASC'), :id, :name %>
     <p>Or create a new Resort <%= link_to 'here', new_resort_path %></p>
   </div>
-  <div class="field">
+  <div class="field" id='rating_field'>
     <%= f.label :rating, "Rating out of 5" %><br />
     <%= f.number_field :rating %>
   </div>

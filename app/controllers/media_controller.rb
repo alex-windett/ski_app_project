@@ -47,7 +47,7 @@ class MediaController < ApplicationController
 
     respond_to do |format|
       if @medium.save
-        format.html { redirect_to runs_path, notice: 'Medium was successfully created.' }
+        format.html { redirect_to @run, notice: 'Medium was successfully created.' }
         format.json { render json: @medium, status: :created, location: @medium }
       else
         format.html { render action: "new" }
