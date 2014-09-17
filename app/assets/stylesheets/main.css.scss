@@ -113,7 +113,24 @@ input, textarea {
     padding-right:10px; 
   } 
 
-button {
+  button {
+    border-radius: 10px;
+    background-color: white;
+    padding: 1%;
+    a {
+      color: $basecolor;
+    }
+  }
+
+  button:hover {
+     border: solid 2px white;
+     background-color: $basecolor;
+     a {
+      color: white;
+     }
+  }
+
+/*button {
   -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
   -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
   box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -156,4 +173,4 @@ button:hover {
 }button:active {
   position:relative;
   top:1px;
-  }
+  }*/

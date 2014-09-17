@@ -7,7 +7,7 @@
   <p><%= @resort.country.name %></p>
 </div>
 
-  <div id='resort_image'><%= image_tag @resort.image.detail.url if @resort.image.present? %></div>
+  <div id='resort_image'><%= image_tag @resort.image.url if @resort.image.present? %></div>
 
 
   <p>
@@ -26,6 +26,7 @@
   </p>
 
   <button id='button'><%= link_to 'New Run', new_run_path %></button>
-  <% if can? :update, @resort %><button id='button'><%= link_to 'Edit', edit_resort_path(@resort) %><% end %></button>
+  <% if can? :update, @resort %><button><%= link_to 'Edit', edit_resort_path(@resort) %><% end %></button>
+  <% if can? :destroy, @resort %><button><%= link_to 'Remove Resort', @resort, method: :delete, data: { confirm: 'Are you sure?' } %></button><% end %>
   <button id='button'> <%= link_to 'Back', resorts_path %></button>
 </div>
