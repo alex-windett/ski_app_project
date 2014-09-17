@@ -9,6 +9,13 @@ $basecolor: #537BF7;
   }
 }
 
+.pagination span {
+  padding-right: 2%;
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
 .resort_header {
     h2 {
       font-size: 50px;
