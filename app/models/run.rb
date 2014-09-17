@@ -6,7 +6,7 @@ class Run < ActiveRecord::Base
   has_many :segments, :dependent => :destroy
   has_many :markers, :through => :segments
   has_many :comments
-  has_many :mediums
+  has_many :mediums, :dependent => :destroy
 
   validates :rating, :numericality => { :less_than_or_equal_to => 5, :allow_blank => true }
   validate :name, presence: true
