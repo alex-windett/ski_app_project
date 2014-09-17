@@ -4,12 +4,13 @@ function checkForm() {
     if (name == "" ) {
         alert("Provide a name to create a run");
         return false;
-    }
-    else {
+    } if (rating > 5 || rating < 0 ) { 
+      alert("Pleae provide a rating between 0 and 5")
+    } else {
       create()
     }
 }
-
+   
 // creating a new run and a segment
   function create() {
     var runInfo = {
