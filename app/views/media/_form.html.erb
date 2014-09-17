@@ -26,7 +26,8 @@
     <%= f.label :run_id %><br />
     <%= f.collection_select :run_id, Run.all, :id, :name %>
   </div>
+  <br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Add" %>
   </div>
 <% end %>

@@ -53,6 +53,13 @@
       <p><img src="assets/home5.png"></p>
     </div>
 
+  <% if media.video.present? %>
+    <div class="box col4">
+      <%= link_to (video_tag media.video, :controls => true, :poster => "http://cdn3.coresites.mpora.com/skiunion/wp-content/uploads/2011/10/salomon-flash.jpg"), run_path(media.run) if media.video.present? %>
+      <%= link_to media.run.name if media.video.present? %>
+    </div>
+  <% end %>
+
      <div class="box col4">
       <p><img src="assets/media2.png"></p>
     </div>
