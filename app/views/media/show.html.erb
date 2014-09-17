@@ -11,5 +11,7 @@
   <%= link_to @medium.run.name, @medium.run %>
 </p>
 
+  <% if can? :destroy, @medium %><button><%= link_to 'Remove Media', run_medium_path(@medium), method: :delete, data: { confirm: 'Are you sure?' } %></button><% end %>
+
 
 
