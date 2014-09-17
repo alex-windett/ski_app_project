@@ -2,6 +2,10 @@
 <% @media.each do |media| %>
 <div id="container" class="clearfix">
 
+  <div class="box col3">
+      <p><img src="assets/media.png"></p>
+  </div>
+
 
   <% if media.video.present? %>
     <div class="box col2">
@@ -9,6 +13,10 @@
       <%= media.run.name if media.image.present? %>
     </div>
   <% end %>
+
+    <div class="box col4">
+      <p><img src="assets/home3.png"></p>
+    </div>
 
   <% if media.video.present? %>
     <div class="box col3">
@@ -18,7 +26,7 @@
   <% end %>
 
     <div class="box col3">
-      <p><img src="http://ichef.bbci.co.uk/naturelibrary/images/ic/credit/640x395/m/mo/mountain/mountain_1.jpg"></p>
+      <p><img src="assets/home1.png"></p>
     </div>
 
   <% if media.image.present? %>
@@ -33,11 +41,9 @@
       <p>Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula  </p>
     </div> -->
 
-  <% if media.image.present? %>
     <div class="box col2">
-      <p><img src="http://www.frenchpropertyinvestor.com/img/ski1.jpg"></p>
+      <p><img src="assets/home1.png"></p>
     </div>
-  <% end %>
 
 
     <% if media.image.present? %>
@@ -60,6 +66,10 @@
       <%= media.run.name  if media.video.present? %>
     </div>
   <% end %>
+
+    <div class="box col1">
+      <p><img src="assets/home2.png"></p>
+    </div>
 
   <% if media.image.present? %>
    <div class="box col5">

@@ -9,12 +9,18 @@
   <p>Resort: <%= @run.resort.name %></p>
   <p>Rating: <%= @run.rating %></p>
   <p>Uploaded by: <%= @run.user.name %></p>
+  <!-- distance calculation found in media.js -->
+  <p id='distance'>Run Length: </p>
   
-  <% if can? :update, @run %><%= link_to 'Add New Media to this run', new_run_medium_path(@run) %><% end %> <br>
-  <% if can? :update, @run %><%= link_to 'Edit', edit_run_path(@run) %><% end %>  <br>
-  <% if can? :destroy, @run %><%= link_to 'Remove Run', @run, method: :delete, data: { confirm: 'Are you sure?' } %><% end %>
-  <%= link_to 'Back', runs_path %> <br>
+  <% if can? :update, @run %><%= link_to 'Add New Media to this run', new_run_medium_path(@run) %><% end %>  
+  <br><br>
   <%= link_to "Download the PDF", run_path(@run, :format => 'pdf') %>
+    <br><br>
+  <% if can? :update, @run %><%= link_to 'Edit', edit_run_path(@run) %><% end %>
+  - 
+  <% if can? :destroy, @run %><%= link_to 'Remove Run', @run, method: :delete, data: { confirm: 'Are you sure?' } %><% end %>
+  -
+  <%= link_to 'Back', runs_path %>
 </aside>
 
 <!-- <table class='run_info'>
@@ -39,6 +45,11 @@
       <% end %>
     </tbody>
 </table> -->
+
+<p style='display:none' id='firstLat'><%= @run.markers.first.latitude %> </p>
+<p style='display:none' id='firstLon'><%= @run.markers.last.longitude %> </p>
+<p style='display:none' id='lastLat'><%= @run.markers.last.latitude %> </p>
+<p style='display:none' id='lastLon'><%= @run.markers.last.longitude %> </p>
 
 
 <section>
