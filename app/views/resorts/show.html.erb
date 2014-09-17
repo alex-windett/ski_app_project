@@ -11,19 +11,21 @@
 
 
   <p>
-    <b>Description:</b>
     <%= @resort.description %>
   </p>
-  
-  <div id="weather"></div>
-  <div id="hourlyWeather"></div>
+
 
   <p>
-    <b>Uploaded Runs:</b>
+    <h2>Uploaded Runs:</h2>
     <% @resort.runs. each do |run| %>
       <li><%= link_to run.name, run %></li>
     <% end %>
   </p>
+  
+  <hr>
+
+  <div id="weather"></div>
+  <div id="hourlyWeather"></div>
 
   <button id='button'><%= link_to 'New Run', new_run_path %></button>
   <% if can? :update, @resort %><button><%= link_to 'Edit', edit_resort_path(@resort) %><% end %></button>
