@@ -2,7 +2,7 @@
 <% @media.each do |media| %>
 <div id="container" class="clearfix">
 
-  <div class="box col3">
+  <div class="box col1">
       <p><img src="assets/media.png"></p>
   </div>
 
@@ -14,18 +14,18 @@
     </div>
   <% end %>
 
-    <div class="box col4">
+    <div class="box col3">
       <p><img src="assets/home3.png"></p>
     </div>
 
   <% if media.video.present? %>
-    <div class="box col3">
+    <div class="box col4">
       <%= link_to (video_tag media.video, :controls => true, :poster => "http://cdn3.coresites.mpora.com/skiunion/wp-content/uploads/2011/10/salomon-flash.jpg"), run_path(media.run) if media.video.present? %>
       <%= link_to media.run.name if media.video.present? %>
     </div>
   <% end %>
 
-    <div class="box col3">
+    <div class="box col1">
       <p><img src="assets/home1.png"></p>
     </div>
 
@@ -47,14 +47,14 @@
 
 
     <% if media.image.present? %>
-    <div class="box col3">
+    <div class="box col1">
       <%= link_to (image_tag media.image), run_path(media.run) if media.image.present? %>
       <%= media.run.name if media.image.present? %>
     </div>
   <% end %>
 
   <% if media.image.present? %>
-   <div class="box col1">
+   <div class="box col3">
       <%= link_to (image_tag media.image), run_path(media.run) if media.image.present? %>
       <%= media.run.name if media.image.present? %>
     </div>
@@ -70,7 +70,6 @@
     <div class="box col1">
       <p><img src="assets/home2.png"></p>
     </div>
-
 
 
 
