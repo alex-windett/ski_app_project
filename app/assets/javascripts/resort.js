@@ -9,7 +9,7 @@ $(document).ready(function(){
   }).success(function(data){
     var weather = data.data.weather[0]
     $("#weather")
-    .append("<h3>Todays Weather</h3>")
+    .append("<h2>Todays Weather</h2>")
       .append("<li>Max Temp: " + weather.mid[0].maxtempC + "°C" + "</li>")
       .append("<li>Min Temp: " + weather.mid[0].mintempC + "°C" + "</li>")
       .append("<li>Current Snow Depth: " + weather.totalSnowfall_cm + "cm</li>")
