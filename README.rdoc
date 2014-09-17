@@ -2,7 +2,7 @@ Ski App
 
 A ski tracking and sharing app for snowsports, with the ability to upload GPS co-ordinates and track from mobile devises. These will then be mapped giving the ability to view their ski routes, and view other users ski routes. 
 
-Catagorised into Countries, Resorts and Runs
+Catagorised into Countries, Resorts and Runs, the site is semi-open source with anyone have access to add a resort and country to the lists, but moderated by a admin who has a manage all power.
 
 To upload coordinates from a GPX file, create a new run and attatch the file plus relevant details. Videos and photos can be added by enyone, but deleting and destroying of the run is controlled by the user.
 
