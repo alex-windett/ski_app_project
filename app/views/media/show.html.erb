@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class='media_show'>
-  <%= image_tag @medium.image.detail.url if @medium.image.present? %>
+  <%= image_tag @medium.image if @medium.image.present? %>
 
   <%= (video_tag @medium.video, :controls => true, :autoplay => true) if @medium.video.present? %>
 </div>
