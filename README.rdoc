@@ -1,9 +1,9 @@
 Ski App
 
-A ski tracking and sharing app for extreme backcountry snowsports, with the ability to upload GPS co-ordinates. These will then be mapped giving the ability to view their ski routes, and view other users ski routes. 
+A ski tracking and sharing app for snowsports, with the ability to upload GPS co-ordinates and track from mobile devises. These will then be mapped giving the ability to view their ski routes, and view other users ski routes. 
 
 Catagorised into Countries, Resorts and Runs
 
-Instructions for downloading and uploading for this site are as follows:
+To upload coordinates from a GPX file, create a new run and attatch the file plus relevant details. Videos and photos can be added by enyone, but deleting and destroying of the run is controlled by the user.
 
-....
+To track a new run, navigate to page from menu bar and create a new run with the form, then hit track and watch your speed, altitude and currrent co-ordintes. When finish just hit stop and you will be redirected to the run to see your path.
