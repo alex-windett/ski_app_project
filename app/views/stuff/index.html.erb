@@ -71,12 +71,7 @@
       <p><img src="assets/home2.png"></p>
     </div>
 
-  <% if media.image.present? %>
-   <div class="box col5">
-      <%= link_to (image_tag media.image), run_path(media.run) if media.image.present? %>
-      <%= link_to media.run.name if media.image.present? %>
-    </div>
-  <% end %>  
+
 
 
     <!-- <div class="box col2">
