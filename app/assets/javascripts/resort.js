@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
   val = $("#resortName").html()
-
-  $.ajax({
+  if(val != undefined){
+    $.ajax({
     type: "GET",
     url: "http://api.worldweatheronline.com/free/v1/ski.ashx?key=fc291ebd60c20935283da4510cd776a66d335e1d&q=" + val + "&format=json",
     dataType: "json"
@@ -21,6 +21,8 @@ $(document).ready(function(){
       .append("<li>Wind Direction: " + weather.hourly[0].mid[0].winddir16Point + "</li>")
       .append("<li>Description: " + weather.hourly[0].mid[0].weatherDesc[0].value + "</li>") 
       .append("<li>  <img id=weather src='" + weather.hourly[0].mid[0].weatherIconUrl[0].value + "'/></li>")
-  })
+    })
+  }
+  
 
 });
