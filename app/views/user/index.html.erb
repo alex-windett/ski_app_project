@@ -1,7 +1,7 @@
 <h1>Members</h1>
 
-<% @user.each do |user| %>
-  <%= link_to user.name, user %>
-<% end %>
+    <% @user.each do |user| %>
+      <li id='user'><%= link_to user.name, user %></li>
+    <% end %>
 
-<%= paginate @user %>
+    <%= paginate @user %>
