@@ -13,8 +13,10 @@ prawn_document() do |pdf|
   pdf.move_down 30
 
     @run.mediums.each do |media|
-      pdf.image open(media.image.url), width: 200
-      pdf.move_down 10
+      if media.image
+        pdf.image open(media.image.url), width: 200
+        pdf.move_down 10
+      end
     end
 
 end
