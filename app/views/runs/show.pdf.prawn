@@ -12,11 +12,12 @@ prawn_document() do |pdf|
   pdf.text @run.description
   pdf.move_down 30
 
-    @run.mediums.each do |media|
-      if media.image
-        pdf.image open(media.image.url), width: 200
-        pdf.move_down 10
-      end
-    end
+  #  Needs to be rewritten, videos will make it crash when trying to load videos
+    # @run.mediums.each do |media|
+    #   if media.image
+    #     pdf.image open(media.image.url), width: 200
+    #     pdf.move_down 10
+    #   end
+    # end
 
 end
