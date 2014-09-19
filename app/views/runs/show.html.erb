@@ -23,6 +23,13 @@
   <%= link_to 'Back', runs_path %>
 </aside>
 
+<% if @run.markers.present? %>
+<p style='display:none' id='firstLat'><%= @run.markers.first.latitude %> </p>
+<p style='display:none' id='firstLon'><%= @run.markers.last.longitude %> </p>
+<p style='display:none' id='lastLat'><%= @run.markers.last.latitude %> </p>
+<p style='display:none' id='lastLon'><%= @run.markers.last.longitude %> </p>
+<% end %>
+
 <section>
   <div id="map_canvas"></div>
   <div class="graph"></div>
