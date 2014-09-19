@@ -23,35 +23,6 @@
   <%= link_to 'Back', runs_path %>
 </aside>
 
-<!-- <table class='run_info'>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Latitude</th>
-        <th>Longitude</th>
-        <th>Elevation</th>
-        <th>Time</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @run.markers.each do |marker| %>
-        <tr>
-          <td><%= marker.id %></td>
-          <td><%= marker.latitude %></td>
-          <td><%= marker.longitude %></td>
-          <td><%= marker.elevation %></td>
-          <td><%= marker.marker_created_at %></td>
-        </tr>
-      <% end %>
-    </tbody>
-</table> -->
-
-<!-- <p style='display:none' id='firstLat'><%= @run.markers.first.latitude %> </p>
-<p style='display:none' id='firstLon'><%= @run.markers.last.longitude %> </p>
-<p style='display:none' id='lastLat'><%= @run.markers.last.latitude %> </p>
-<p style='display:none' id='lastLon'><%= @run.markers.last.longitude %> </p> -->
-
-
 <section>
   <div id="map_canvas"></div>
   <div class="graph"></div>
