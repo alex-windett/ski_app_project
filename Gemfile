@@ -26,6 +26,7 @@ gem 'ransack'
 gem 'prawn_rails'
 gem 'cancan'
 gem 'jquery-ui-rails'
+gem 'newrelic_rpm'
 
 # Gems used only for assets and not required
 # in production environments by default.
