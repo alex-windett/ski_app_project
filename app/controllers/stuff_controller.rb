@@ -1,7 +1,7 @@
 class StuffController < ApplicationController
 
   def index
-@media = Medium.all
+    @media = Medium.all
   end
 
 

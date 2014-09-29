@@ -1,3 +1,4 @@
+// basic javascript and HTML validation
 function checkForm() {
   var name = document.forms["trackingForm"]["name"].value;
   var rating = document.forms["trackingForm"]["rating"].value;
@@ -11,7 +12,8 @@ function checkForm() {
     }
 }
    
-// creating a new run and a segment
+// creating a new run and a segment on succesful sumbission 
+// of form
   function create() {
     var runInfo = {
       name: document.getElementById("name").value,
@@ -48,8 +50,10 @@ function checkForm() {
       $('.geo_data').hide()
     }      
 // -----------------------------------
-// find location and keep tracking
 
+// find location and keep tracking
+// post every new marker to database
+// display current information to screen
 function geoFindMe() {
   var output = document.getElementById("output");
   if (!navigator.geolocation){
@@ -88,9 +92,12 @@ function geoFindMe() {
   };
 
   id = navigator.geolocation.watchPosition(success, error, options);
+  // run either error or success functions
+  // when success use the options of high accuracy and timeout 
+  // after 6 secs
 
- $('#stop_tracking').show();
-        $('#start_tracking').hide()
+  $('#stop_tracking').show();
+  $('#start_tracking').hide()
 
 }
 

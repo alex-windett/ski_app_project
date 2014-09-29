@@ -2,6 +2,7 @@ gm_init = ->
   gm_center = new google.maps.LatLng(51.50, 0.12)
   gm_map_type = google.maps.MapTypeId.TERRAIN
   map_options = {center: gm_center, zoom: 2, mapTypeId: gm_map_type}
+// setting map default settings when no markers are present
 
   new google.maps.Map(@map_canvas,map_options);
 
@@ -9,6 +10,7 @@ gm_init = ->
 load_run = (id,map) ->
   callback = (data) -> display_on_map(data,map)
   $.get '/runs/' + id + '.json', {}, callback, 'json'
+// get request for JSON data of perticular run
 
 display_on_map = (data,map) ->
   decoded_path = google.maps.geometry.encoding.decodePath(data.polyline)
@@ -16,6 +18,7 @@ display_on_map = (data,map) ->
   run_path = new google.maps.Polyline(path_options)
   run_path.setMap(map)
   map.fitBounds(calc_bounds(run_path));
+// displaying the line on the map
 
 calc_bounds = (run_path) ->
   b = new google.maps.LatLngBounds()
@@ -30,3 +33,4 @@ $ ->
   if window.map_canvas != undefined
     map = gm_init()
     load_run(js_run_id,map)
+// for a particular run load map

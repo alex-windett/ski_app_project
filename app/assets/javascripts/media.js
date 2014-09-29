@@ -1,5 +1,5 @@
   $(function(){
-    
+    // Masonary Jquery
     $('#container').masonry({
       itemSelector: '.box',
       columnWidth: 100,
@@ -8,6 +8,8 @@
     });
     
 
+// The maths to calculate the distance of a run between the first
+// and last markers
   function toRad(Value) {
     /** Converts numeric degrees to radians */
     return Value * Math.PI / 180;

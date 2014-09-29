@@ -1,3 +1,5 @@
+// AJAX request for the weather updates for a resort
+
 $(document).ready(function(){
 
   val = $("#resortName").html()

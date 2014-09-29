@@ -17,6 +17,8 @@ class Run < ActiveRecord::Base
 
   before_save :parse_file
 
+
+  # parsing the upladed gpx file with the Nokogiri
   def parse_file
     tempfile = gpx.queued_for_write[:original]
     doc = Nokogiri::XML(tempfile)
@@ -63,13 +65,15 @@ class Run < ActiveRecord::Base
       tmp_segment.markers << tmp_marker
     end
   end
+  # extracting the track, tracksegment and trackpoint from the
+  # GPX file
 
   def polyline_markers
     self.markers.map(&:latlng)
   end
 
-   def polyline
+  def polyline
       Polylines::Encoder.encode_points(self.polyline_markers)
-    end
+  end
 
 end
