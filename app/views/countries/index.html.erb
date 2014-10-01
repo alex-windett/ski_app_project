@@ -22,6 +22,7 @@
       <h2> {{ selectedCountry.name }} </h2>
       <ul>
         <li ng-repeat="resort in resorts" ng-if="resort.country_id === selectedCountry.id">
+          <!-- <a href="resorts/{{resort.id}}"> <img ng-src="{{ resort.image }}"/> </a> -->
           <a href="/resorts/{{resort.id}}"> {{ resort.name }} </a>
         </li>
       </ul>

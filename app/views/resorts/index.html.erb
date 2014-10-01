@@ -1,9 +1,8 @@
 <h1>Pick Somewhere to Visit</h1>
 
-
   <% @resorts.each do |resort| %>
     <div class='resort_index'>
-      
+
       <h2><%= link_to resort.name, resort %>, <%= resort.country.name %></h2>
       <%= link_to (image_tag resort.image), resort %>
 

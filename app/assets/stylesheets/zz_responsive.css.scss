@@ -77,9 +77,22 @@ input, textarea {
 }
 
 
+
 } 
 
 @media only screen and (max-width : 770px) {
+
+
+ .resort_index {
+  vertical-align: top;
+  width: 48%;
+  margin: 1% 0 1% 1%;
+  display: inline-block;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
 
   .col1 img {
 -webkit-filter: sepia(0%);
@@ -159,7 +172,6 @@ input, textarea {
   &:hover{
     -webkit-filter: saturate(150%);
     }
-
- }
+}
 
 }
