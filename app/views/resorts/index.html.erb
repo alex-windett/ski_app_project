@@ -4,7 +4,7 @@
     <div class='resort_index'>
 
       <h2><%= link_to resort.name, resort %>, <%= resort.country.name %></h2>
-      <%= link_to (image_tag resort.image), resort %>
+      <%= image_tag resort.image %>
 
         <% if resort.runs.present? %> 
           <% resort.runs.each do |run| %>
