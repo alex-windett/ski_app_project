@@ -1,11 +1,26 @@
 $basecolor: #537BF7;
 
+.resort_index {
+  vertical-align: top;
+  width: 23%;
+  margin: 1% 0 1% 1%;
+  display: inline-block;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .resort {
   li {
     list-style: none;
   }
-  p:first-child {
-    
+  .resort_runs {
+    list-style: disc;
+    padding: 1% 0 0 0;
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
   }
 }
 
@@ -32,6 +47,7 @@ $basecolor: #537BF7;
 #weather {
   width: 50%;
   float: left;
+  padding-bottom: 1%;
 }
 
  #hourlyWeather {
@@ -39,6 +55,7 @@ $basecolor: #537BF7;
   float: right;
   text-align: right;
   img {
+    padding-top: 1%;
     width: 20%;
     float: right;
   }

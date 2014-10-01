@@ -25,8 +25,6 @@ $(document).ready(function() {
 
         var g = vis.append("svg:g")
             .attr("transform", "translate(0, 200)");
-        
-
 
         var line = d3.svg.line()
             .x(function(d,i) { return x(i); })
@@ -34,19 +32,22 @@ $(document).ready(function() {
         
         g.append("svg:path").attr("d", line(data))
        
-       
+// X - axis line       
         g.append("svg:line")
             .attr("x1", x(0))
             .attr("y1", y )
             .attr("x2", 10 + x(d3.max(data)))
             .attr("y2", y )
 
+// Y - axis line
         g.append("svg:line")
             .attr("x1", x(0))
             .attr("y1", -1 * y(0))
             .attr("x2", x(0))
             .attr("y2", -1 * y(d3.max(data)))
-        
+
+// X - axis numbering, not in because it counts number of
+// markers and not the distance        
         // g.selectAll(".xLabel")
         //     .data(x.ticks(5))
         //     .enter().append("svg:text")
@@ -56,6 +57,7 @@ $(document).ready(function() {
         //     .attr("y", -1)
         //     .attr("text-anchor", "middle")
 
+// Y - axis numbering
         g.selectAll(".yLabel")
             .data(y.ticks(4))
             .enter().append("svg:text")
@@ -66,24 +68,26 @@ $(document).ready(function() {
             .attr("text-anchor", "right")
             .attr("dy", 0)
             .style('color', 'white')
-        
-        g.selectAll(".xTicks")
-            .data(x.ticks(5))
-            .enter().append("svg:line")
-            .attr("class", "xTicks")
-            .attr("x1", function(d) { return x(d); })
-            .attr("y1", -1 * y(0))
-            .attr("x2", function(d) { return x(d); })
-            .attr("y2", -1 * y(-0.3))
 
-        g.selectAll(".yTicks")
-            .data(y.ticks(4))
-            .enter().append("svg:line")
-            .attr("class", "yTicks")
-            .attr("y1", function(d) { return -1 * y(d); })
-            .attr("x1", x(-1))
-            .attr("y2", function(d) { return -1 * y(d); })
-            .attr("x2", x(0))
+// the dashes on the x-axis lines        
+        // g.selectAll(".xTicks")
+        //     .data(x.ticks(5))
+        //     .enter().append("svg:line")
+        //     .attr("class", "xTicks")
+        //     .attr("x1", function(d) { return x(d); })
+        //     .attr("y1", -1 * y(0))
+        //     .attr("x2", function(d) { return x(d); })
+        //     .attr("y2", -1 * y(-0.3))
+
+// the dashes on the y-axis lines  
+        // g.selectAll(".yTicks")
+        //     .data(y.ticks(4))
+        //     .enter().append("svg:line")
+        //     .attr("class", "yTicks")
+        //     .attr("y1", function(d) { return -1 * y(d); })
+        //     .attr("x1", x(-1))
+        //     .attr("y2", function(d) { return -1 * y(d); })
+        //     .attr("x2", x(0))
         
       });
     }

@@ -36,4 +36,8 @@
   // printing distance to 2 decimal points in KM
   $("#distance").append(d.toFixed(2) + " Km")
 
+// need to find a way to find total distance.
+// at the momement if the loop is circular then it distance between
+// start and end point, not whole journey
+
   });

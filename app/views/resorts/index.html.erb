@@ -1,14 +1,24 @@
-<h1>Listing resorts</h1>
+<h1>Pick Somewhere to Visit</h1>
 
-<table>
-<% @resorts.each do |resort| %>
-  <tr>
-    <td><%= link_to resort.name, resort %>, <%= resort.country.name %></td>
-    <td><% if can? :update, resort %><%= link_to 'Edit', edit_resort_path(resort) %><% end %></td>
-    <td><% if can? :destroy, resort %><%= link_to 'Destroy', resort, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></td>
-  </tr>
-<% end %>
-</table>
+
+  <% @resorts.each do |resort| %>
+    <div class='resort_index'>
+      
+      <h2><%= link_to resort.name, resort %>, <%= resort.country.name %></h2>
+      <%= link_to (image_tag resort.image), resort %>
+
+        <% if resort.runs.present? %> 
+          <% resort.runs.each do |run| %>
+            <p><%= run.name %></p>
+          <% end %>
+        <% end %>
+
+      <% if can? :update, resort %><%= link_to 'Edit', edit_resort_path(resort) %><% end %>
+      <% if can? :destroy, resort %><%= link_to 'Destroy', resort, method: :delete, data: { confirm: 'Are you sure?' } %><% end %>
+
+    </div>
+  <% end %>
+
 
 <br />
 
