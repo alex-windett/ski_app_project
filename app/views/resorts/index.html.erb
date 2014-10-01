@@ -4,13 +4,15 @@
     <div class='resort_index'>
 
       <h2><%= link_to resort.name, resort %>, <%= resort.country.name %></h2>
-      <%= image_tag resort.image %>
+      <% if resort.image.present? %>
+        <%= link_to (image_tag resort.image.detail.url), resort %>
+      <% end %>
 
-        <% if resort.runs.present? %> 
-          <% resort.runs.each do |run| %>
-            <p><%= run.name %></p>
-          <% end %>
+      <% if resort.runs.present? %> 
+        <% resort.runs.each do |run| %>
+          <p><%= run.name %></p>
         <% end %>
+      <% end %>
 
       <% if can? :update, resort %><%= link_to 'Edit', edit_resort_path(resort) %><% end %>
       <% if can? :destroy, resort %><%= link_to 'Destroy', resort, method: :delete, data: { confirm: 'Are you sure?' } %><% end %>
