@@ -5,7 +5,7 @@
 
       <h2><%= link_to resort.name, resort %>, <%= resort.country.name %></h2>
       <% if resort.image.present? %>
-        <%= link_to (image_tag resort.image.detail.url), resort %>
+        <%= link_to (image_tag resort.image), resort %>
       <% end %>
 
       <% if resort.runs.present? %> 
