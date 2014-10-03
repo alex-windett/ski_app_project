@@ -77,8 +77,34 @@ input, textarea {
 
 @media only screen and (max-width : 770px) {
 
+#mobile_modal {
+  visibility: visible;
+  position: relative;
+
+}
+
 .remodal-bg {
-  display: hidden;
+margin-top: 0%;
+/* background-color: $basecolor; */
+display: block;
+width: 100%;
+/* text-align: center; */
+/* border-radius: 10px; */
+margin-top: -27%;
+}
+
+.remodal-bg:hover {
+  background-color: #de3c2d;
+}
+
+.remodal-bg h2 {
+margin-top: 28%;
+padding-top: 7%;
+}
+
+#desktop_modal {
+  visibility: hidden;
+   position: absolute;
 }
 
  .resort_index {
