@@ -12,7 +12,7 @@
   <!-- distance calculation found in media.js -->
   <p id='distance'>Run Length: </p>
   
-  <% if can? :update, @run %><%= link_to 'Add New Media to this run', new_run_medium_path(@run) %><% end %>  
+  <% if can? :update, @run %><%= link_to 'Upload a Photo or Video', new_run_medium_path(@run) %><% end %>  
   <br><br>
   <%= link_to "Download the PDF", run_path(@run, :format => 'pdf') %>
     <br><br>
