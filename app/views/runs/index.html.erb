@@ -15,7 +15,7 @@
 <% @runs.each do |run| %>
   <tr>
     <td><%= link_to run.name, run %></td>
-    <td><%= run.description %></td>  
+    <td id='run_description_index'><%= run.description.truncate 150, seperator: " " %></td>  
     <td><%= run.resort.name %></td>
     <td><%= run.rating %></td>
     <td><%= run.created_at.strftime("%b %d, %Y")  %></td>
