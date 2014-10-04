@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <aside class="run_details">
-  <h2><%= @run.name %></h2>
+  <h2><%= @run.name.capitalize %></h2>
   <% if @run %>
   <p style="display:none" id="run_id"><%= @run.id %></p>
   <% end %>
-  <p>Description: <%= @run.description %></p>
+  <p>Description: <%= @run.description.capitalize %></p>
   <p>Resort: <%= @run.resort.name %></p>
   <p>Rating: <%= @run.rating %></p>
   <p>Uploaded by: <%= @run.user.name %></p>
@@ -24,10 +24,10 @@
 </aside>
 
 <% if @run.markers.present? %>
-<p style='display:none' id='firstLat'><%= @run.markers.first.latitude %> </p>
-<p style='display:none' id='firstLon'><%= @run.markers.last.longitude %> </p>
-<p style='display:none' id='lastLat'><%= @run.markers.last.latitude %> </p>
-<p style='display:none' id='lastLon'><%= @run.markers.last.longitude %> </p>
+  <p style='display:none' id='firstLat'><%= @run.markers.first.latitude %> </p>
+  <p style='display:none' id='firstLon'><%= @run.markers.last.longitude %> </p>
+  <p style='display:none' id='lastLat'><%= @run.markers.last.latitude %> </p>
+  <p style='display:none' id='lastLon'><%= @run.markers.last.longitude %> </p>
 <% end %>
 
 <section>

@@ -1,4 +1,4 @@
-<h1>All Current Runs</h1>
+<h1>Recorder Ski Runs</h1>
 
 <table>
   <tr>
@@ -14,8 +14,8 @@
 
 <% @runs.each do |run| %>
   <tr>
-    <td><%= link_to run.name, run %></td>
-    <td id='run_description_index'><%= run.description.truncate 150, seperator: " " %></td>  
+    <td><%= link_to run.name.capitalize, run %></td>
+    <td id='run_description_index'><%= run.description.capitalize.truncate 150, seperator: " " %></td>  
     <td><%= run.resort.name %></td>
     <td><%= run.rating %></td>
     <td><%= run.created_at.strftime("%b %d, %Y")  %></td>
