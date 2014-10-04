@@ -77,6 +77,9 @@ input, textarea {
 
 @media only screen and (max-width : 770px) {
 
+
+/* Slight hack, hidding modals and making buttons visible direct*/
+/* to certain pages*/
 #mobile_modal {
   visibility: visible;
   position: relative;
@@ -90,7 +93,7 @@ display: block;
 width: 100%;
 /* text-align: center; */
 /* border-radius: 10px; */
-margin-top: -27%;
+margin-top: -26%;
 }
 
 .remodal-bg:hover {
