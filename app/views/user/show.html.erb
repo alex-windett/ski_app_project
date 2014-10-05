@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<div class='user_profile'>
   <h1><%= @user.name %></h1>
   
-  <%= if @user.photo.present? then image_tag @user.photo else "assets/anton.png" end %>
+  <%= (if @user.photo.present? then image_tag @user.photo else image_tag "empty_user.png" end) %>
 
   <p>
     <b> <h2>Date of Birth:</h2>
@@ -16,7 +17,10 @@
           <li><%= link_to run.name, run %></li>
         <% end %>
       <% end %></b>
+      <br><br>
   </p>
      
-    <% if can? :update, @user %><%= link_to 'Edit Profile', edit_user_registration_path %><% end %> |
+    <% if can? :update, @user %><%= link_to 'Edit Profile', edit_user_registration_path %>|<% end %> 
     <% if can? :destroy, @user %><%= link_to 'Cancel Account', @user, method: :delete, data: { confirm: 'Are you sure?' } %><% end %>
+
+</div>

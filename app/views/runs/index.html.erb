@@ -1,29 +1,20 @@
 <h1>Recorder Ski Runs</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Resort</th>
-    <th>Rating</th>
-    <th>Logged</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <% @runs.each do |run| %>
+    <div class='resort_index'>
 
-<% @runs.each do |run| %>
-  <tr>
-    <td><%= link_to run.name.capitalize, run %></td>
-    <td id='run_description_index'><%= run.description.capitalize.truncate 150, seperator: " " %></td>  
-    <td><%= run.resort.name %></td>
-    <td><%= run.rating %></td>
-    <td><%= run.created_at.strftime("%b %d, %Y")  %></td>
-    <td><% if can? :update, run %><%= link_to 'Edit  ', edit_run_path(run) %><% end %></td>
-    <td><% if can? :destroy, run %><%= link_to 'Destroy', run, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></td>
-  </tr>
-<% end %>
-</table>
+      <h2><%= link_to run.name.capitalize, run %></h2>
+      <p> <%= run.resort.name %><p>
+      <% if run.mediums.present? && run.mediums.first.image.present? %>
+        <%= link_to (image_tag run.mediums.first.image), run %>
+      <% end %>
+      <p><%= run.description.capitalize.truncate 200, seperator: " " %></p>
+
+      <% if can? :update, run %><%= link_to 'Edit', edit_resort_path(run) %>|<% end %>
+      <% if can? :destroy, run %><%= link_to 'Destroy', run, method: :delete, data: { confirm: 'Are you sure?' } %><% end %>
+      <br><br>
+    </div>
+  <% end %>
 
 <br />
 

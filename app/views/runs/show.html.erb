@@ -16,10 +16,8 @@
   <br><br>
   <%= link_to "Download the PDF", run_path(@run, :format => 'pdf') %>
     <br><br>
-  <% if can? :update, @run %><%= link_to 'Edit', edit_run_path(@run) %><% end %>
-  - 
-  <% if can? :destroy, @run %><%= link_to 'Remove Run', @run, method: :delete, data: { confirm: 'Are you sure?' } %><% end %>
-  -
+  <% if can? :update, @run %><%= link_to 'Edit', edit_run_path(@run) %>-<% end %>
+  <% if can? :destroy, @run %><%= link_to 'Remove Run', @run, method: :delete, data: { confirm: 'Are you sure?' } %>-<% end %>
   <%= link_to 'Back', runs_path %>
 </aside>
 

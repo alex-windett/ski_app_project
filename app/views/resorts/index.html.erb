@@ -14,7 +14,7 @@
         <% end %>
       <% end %>
 
-      <% if can? :update, resort %><%= link_to 'Edit', edit_resort_path(resort) %><% end %>
+      <% if can? :update, resort %><%= link_to 'Edit', edit_resort_path(resort) %>|<% end %>
       <% if can? :destroy, resort %><%= link_to 'Destroy', resort, method: :delete, data: { confirm: 'Are you sure?' } %><% end %>
 
     </div>

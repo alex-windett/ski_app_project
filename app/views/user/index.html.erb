@@ -1,7 +1,10 @@
 <h1>Members</h1>
 
     <% @user.each do |user| %>
-      <li id='user'><%= link_to user.name, user %></li>
+    <div class='resort_index'>
+      <h2 id='user'><%= link_to user.name, user %></h2>
+      <p> <%= link_to (if user.photo.present? then image_tag user.photo else image_tag "empty_user.png" end), user %></p>
+    </div>
     <% end %>
 
     <%= paginate @user %>
