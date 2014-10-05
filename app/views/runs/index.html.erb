@@ -1,4 +1,4 @@
-<h1>Recorder Ski Runs</h1>
+<h1>Recorded Ski Runs</h1>
 
   <% @runs.each do |run| %>
     <div class='resort_index'>
@@ -10,7 +10,7 @@
       <% end %>
       <p><%= run.description.capitalize.truncate 200, seperator: " " %></p>
 
-      <% if can? :update, run %><%= link_to 'Edit', edit_resort_path(run) %>|<% end %>
+      <% if can? :update, run %><%= link_to 'Edit', edit_run_path(run) %> |<% end %>
       <% if can? :destroy, run %><%= link_to 'Destroy', run, method: :delete, data: { confirm: 'Are you sure?' } %><% end %>
       <br><br>
     </div>
