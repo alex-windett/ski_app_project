@@ -10,20 +10,25 @@
   <div><%= f.label :dob %><br />
     <%= f.date_select :dob, start_year: 1914, end_year: 2014 %></div>
 
+  <div class="field">
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
+  </div>
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+  <div class='field'><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
 
-  <div><%= f.label :password_confirmation %><br />
+  <div class='field'><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+  <div class='field'><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %></div>
 
-  <div><%= f.submit "Update" %></div>
+  <div class='actions'><%= f.submit "Update" %></div>
 
   <div>  
     <p><%= link_to "Link this account with your Google Accoutnt",user_omniauth_authorize_path(:google_oauth2) %></p>

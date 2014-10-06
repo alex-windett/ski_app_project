@@ -5,12 +5,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2, :github]
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :dob, :role
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :dob, :role, :photo
   # attr_accessible :title, :body
 
   has_many :runs 
   has_many :comments
   has_many :authentications
+
+  mount_uploader :photo, UserPhotoUploader
 
   
     def self.find_for_oauth(kind, auth, signed_in_user=nil)
