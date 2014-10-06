@@ -40,4 +40,5 @@
 // at the momement if the loop is circular then it distance between
 // start and end point, not whole journey
 
+
   });
