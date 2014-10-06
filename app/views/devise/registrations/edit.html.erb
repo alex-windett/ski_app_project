@@ -3,12 +3,11 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
+  <div class='field'><%= f.label :email %><br />
   <%= f.email_field :email, autofocus: true %></div>
-   <div><%= f.label :name %><br />
+
+   <div class='field'><%= f.label :name %><br />
     <%= f.text_field :name %></div>
-  <div><%= f.label :dob %><br />
-    <%= f.date_select :dob, start_year: 1914, end_year: 2014 %></div>
 
   <div class="field">
     <%= f.label :photo %><br />
@@ -28,19 +27,19 @@
   <div class='field'><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %></div>
 
+    <br><br>
+
   <div class='actions'><%= f.submit "Update" %></div>
 
   <div>  
-    <p><%= link_to "Link this account with your Google Accoutnt",user_omniauth_authorize_path(:google_oauth2) %></p>
-  </div>
-
-  <div>
+    <p><%= link_to "Link this account with your Google Account",user_omniauth_authorize_path(:google_oauth2) %></p>
     <p><%= link_to "Link this account with your GitHub Account",user_omniauth_authorize_path(:github) %></p>
   </div>
 <% end %>
 
 <h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<div class='actions'><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></div>
+<br><br>
 
 <%= link_to "Back", :back %>
