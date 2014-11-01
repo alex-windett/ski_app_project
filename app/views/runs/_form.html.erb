@@ -13,7 +13,7 @@
 
 
   <div class="field">
-    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.hidden_field :user_id, :value => if current_user.present? thencurrent_user.name else "Unregistered Member" end %>
   </div>
   <div class="field">
     <%= f.label :name %><br />

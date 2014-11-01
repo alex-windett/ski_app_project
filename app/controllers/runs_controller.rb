@@ -1,5 +1,5 @@
 class RunsController < ApplicationController
-    before_filter :authenticate_user! 
+    # before_filter :authenticate_user! 
   # GET /runs
   # GET /runs.json
   def index

@@ -1,6 +1,6 @@
 <h1>Track A New Run</h1>
   <form name='trackingForm' class="geo_data">
-    <p id='userId' style='display:none'><%= current_user.id %></p>
+    <p id='userId' style='display:none'><%= if current_user.present? then current_user.id else "Unregistered Member" end %></p>
     <p>Name: </p> 
     <input id="name" name='name'>
     <br />

@@ -1,6 +1,6 @@
 class TrackController < ApplicationController
 
-  before_filter :authenticate_user!
+  # before_filter :authenticate_user!
 
   def index
     @run = Run.new(params[:run])

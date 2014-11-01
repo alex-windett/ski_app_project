@@ -8,7 +8,7 @@
   <p>Description: <%= @run.description.capitalize %></p>
   <p>Resort: <%= @run.resort.name %></p>
   <p>Rating: <%= @run.rating %></p>
-  <p>Uploaded by: <%= @run.user.name %></p>
+  <p>Uploaded by: <%= if @run.user.present? then @run.user.name else "Unregistered Member" end %></p>
   <!-- distance calculation found in media.js -->
   <p id='distance'>Run Length: </p>
   
